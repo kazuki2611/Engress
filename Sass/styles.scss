@@ -1,0 +1,117 @@
+@import "foundation/reset";
+@import "foundation/mixin";
+@import "foundation/variable.scss";
+
+@import "foundation/base";
+@import "layout/header";
+@import "object/project/hamburger";
+
+@import "layout/sidebar";
+
+@import "object/project/global-nav";
+@import "object/component/button";
+
+@import "object/project/black-bg";
+.p-dropdown-menu {
+  list-style: 1.8;
+align-items: center;
+  @include breakpoint(pc) {
+    display: flex;
+    margin-left: 30px;
+  }
+  &__list {
+    font-weight: bold;
+    list-style: none;
+    @include breakpoint(pc) {
+      margin-top: 0;
+      margin-left: 28px;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+  &__item {
+    padding: 10px 0 10px 20px;
+    border-bottom: solid 1px #fff;
+    list-style: none;
+    background-color: #1b224c;
+    font-family: "游ゴシック体";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.8;
+    display: block;
+    cursor: pointer;
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+    @include breakpoint(pc) {
+      a {
+        color: #000;
+      }
+      padding: 0;
+      border-bottom: 0;
+      background-color: transparent;
+    }
+  }
+}
+.l-header__right {
+  margin-top: 30px;
+  @include breakpoint(pc) {
+    display: flex;
+    margin-left: auto;
+   margin-top: 0;
+  }
+  &__button {
+    background-color: #f5a623;
+    padding: 10px;
+    border-radius: 5px;
+    width: 140px;
+    height: 50px;
+    line-height: 1.7;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+    @include breakpoint(pc) {
+      margin: 0;
+    }
+    &__blue {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #1b224c;
+      margin-left: 10px;
+      width: 140px;
+      height: 50px;
+      line-height: 1.7;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+  &__number {
+    display: flex;
+    font-weight: bold;
+    line-height: 1.6;
+    @include breakpoint(pc) {
+      justify-content: space-between;
+    }
+  }
+  &__contact {
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  &__wrap {
+    @include breakpoint(pc) {
+      text-align: right;
+      margin-right: 20px;
+    }
+  }
+}
+.l-header__left {
+  @include breakpoint (pc) {
+
+    display: flex;
+    align-items: center;
+  }
+}

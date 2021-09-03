@@ -1,0 +1,40 @@
+.l-header {
+  margin: 20px;
+  position: relative;
+  font-family: "游ゴシック体";
+  width: 100%;
+  @include breakpoint(pc) {
+    display: flex;
+    
+  }
+
+  @include breakpoint(pc) {
+    margin-top: 27px;
+    margin-left: 10px;
+    // display: flex;
+    // justify-content: space-between;
+  }
+  &__wrap {
+   @include breakpoint (pc) {
+     display: flex;
+     
+   }
+    
+    
+  }
+  &__inner {
+    align-items: center;
+
+    @include breakpoint(pc) {
+      justify-content: space-between;
+      display: flex;
+      justify-content: start;
+    }
+  }
+  &__logo__nav {
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+}
+
