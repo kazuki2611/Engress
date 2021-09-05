@@ -1,0 +1,38 @@
+.p-concept {
+  background-color: #1b224c;
+
+  padding: 0 10px 40px 10px;
+
+  @include breakpoint(pc) {
+    padding-bottom: 54px;
+  }
+  &__inner {
+    padding-top: 65px;
+    text-align: center;
+
+    br {
+      display: none;
+      @include breakpoint(pc) {
+        display: block;
+      }
+    }
+    @include breakpoint(pc) {
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  &__wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 11px 16px 12px 16px;
+    margin-top: 83px;
+    &__inner {
+      border: solid 5px #1b224c;
+    }
+  }
+}

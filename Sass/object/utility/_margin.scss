@@ -1,0 +1,6 @@
+.u-margin {
+  @include breakpoint(tablet) {
+    margin-left: 0;
+    margin-right: 50px;
+  }
+}

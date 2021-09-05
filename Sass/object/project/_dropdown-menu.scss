@@ -1,0 +1,23 @@
+.p-dropdown-menu {
+  list-style: 1.8;
+  align-items: center;
+
+  @include breakpoint(pc) {
+    width: auto;
+    display: flex;
+
+    margin-left: 30px;
+  }
+  &__list {
+    font-weight: bold;
+    list-style: none;
+    @include breakpoint(pc) {
+      margin-top: 0;
+      margin-left: 28px;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}

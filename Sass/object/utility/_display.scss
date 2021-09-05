@@ -1,0 +1,7 @@
+.u-display {
+  @include breakpoint(tablet) {
+    flex-direction: row-reverse;
+    display: flex;
+    margin-left: 0;
+  }
+}

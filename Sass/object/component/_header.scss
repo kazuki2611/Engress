@@ -1,0 +1,37 @@
+.c-header {
+  &__right {
+    &__button {
+      background-color: #f5a623;
+      padding: 10px;
+      border-radius: 5px;
+
+      height: 50px;
+      line-height: 1.7;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 30px;
+      @include breakpoint(pc) {
+        width: 140px;
+        margin: 0;
+      }
+      &__blue {
+        @extend.c-header__right__button;
+
+        background-color: #1b224c;
+        margin-left: 10px;
+      }
+    }
+    &__contact {
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    &__number {
+      display: flex;
+      font-weight: bold;
+      line-height: 1.6;
+      @include breakpoint(pc) {
+        justify-content: space-between;
+      }
+    }
+  }
+}
