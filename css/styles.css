@@ -502,12 +502,12 @@ html.is-open {
   top: 15px;
 }
 
-.c-button a {
+.c-button a, .c-contact__button a {
   color: #fff;
   text-decoration: none;
 }
 
-.c-button a:hover {
+.c-button a:hover, .c-contact__button a:hover {
   opacity: 0.8;
 }
 
@@ -652,7 +652,7 @@ html.is-open {
   }
 }
 
-.c-title {
+.c-title, .c-contact__title {
   font-family: "游ゴシック体";
   font-weight: bold;
 }
@@ -870,7 +870,7 @@ html.is-open {
   }
 }
 
-.p-service__plan {
+.p-service__plan, .p-contact {
   background-image: url(../image/price.png);
   height: 217px;
   margin-top: 60px;
@@ -878,7 +878,7 @@ html.is-open {
 }
 
 @media (min-width: 768px) {
-  .p-service__plan {
+  .p-service__plan, .p-contact {
     margin-top: 90px;
   }
 }
@@ -940,7 +940,7 @@ html.is-open {
   line-height: 1.68;
 }
 
-.c-service__plan__title {
+.c-service__plan__title, .c-contact__title {
   line-height: 1.3;
   padding-top: 60px;
   color: #fff;
@@ -949,12 +949,12 @@ html.is-open {
 }
 
 @media (min-width: 768px) {
-  .c-service__plan__title {
+  .c-service__plan__title, .c-contact__title {
     font-size: 26px;
   }
 }
 
-.c-service__plan__button {
+.c-service__plan__button, .c-contact__button {
   line-height: 1.6;
   margin-top: 25px;
   color: #fff;
@@ -1119,8 +1119,13 @@ html.is-open {
   }
 }
 
+.p-flow section {
+  position: absolute;
+}
+
 .c-flow__title {
   color: #1b224c;
+  text-align: center;
   font-size: 36px;
   line-height: 1.38;
   margin-top: 40px;
@@ -1189,12 +1194,23 @@ html.is-open {
   background-color: #c3c3c3;
 }
 
+.p-faq__inner {
+  display: flex;
+}
+
 .p-faq__wrap {
   text-align: center;
   width: 100%;
   font-size: 14px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .p-faq__wrap {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
 
 .p-faq__wrap__list {
@@ -1216,7 +1232,7 @@ html.is-open {
   }
 }
 
-.c-faq__wrap__titile {
+.c-faq__wrap__title {
   font-family: "游ゴシック体";
   font-weight: 500;
   color: #333333;
@@ -1224,8 +1240,10 @@ html.is-open {
   padding: 20px;
   cursor: pointer;
   display: block;
+  position: relative;
   font-size: 14px;
   line-height: 1.85;
+  width: 100%;
 }
 
 .c-faq__text {
@@ -1243,5 +1261,314 @@ html.is-open {
 
 .u-border {
   border-bottom: 1px solid #1b224c;
+}
+
+.op_plus {
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  top: 10%;
+  left: 30%;
+}
+
+.op_plus:before,
+.op_plus:after {
+  display: block;
+  content: "";
+  background-color: #333;
+  position: absolute;
+  width: 18px;
+  height: 5px;
+  top: 7px;
+  left: 0;
+}
+
+.op_plus:before {
+  width: 5px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+
+.op_plus.active::before {
+  display: none;
+  transform: 0.5;
+}
+
+@media (min-width: 768px) {
+  .p-wrapper {
+    gap: 50px;
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.p-blog__wrap {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .p-blog__wrap {
+    width: 100%;
+  }
+}
+
+.c-blog__title {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .c-blog__title {
+    text-align: left;
+    margin-top: 90px;
+  }
+}
+
+.c-blog__wrap__text {
+  position: relative;
+  margin-left: 20px;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  color: #1B224C;
+}
+
+.c-blog__wrap__text p {
+  text-decoration: underline;
+}
+
+.c-blog__wrap__text time {
+  position: absolute;
+  top: 85%;
+  font-size: 12px;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+}
+
+.c-blog__wrap__image {
+  object-fit: cover;
+  width: 150px;
+  height: auto;
+}
+
+.p-news__wrap {
+  height: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .p-news__wrap {
+    width: 100%;
+  }
+}
+
+.c-news__title {
+  color: #1B224C;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .c-news__title {
+    margin-top: 90px;
+    text-align: left;
+  }
+}
+
+.c-news__wrap__text {
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  color: #1B224C;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.c-news__wrap__text time {
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.p-contact {
+  background-image: url(../image/cta-1.png);
+  text-align: center;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  height: 256px;
+  margin-bottom: 0;
+}
+
+.p-contact a {
+  text-decoration: underline;
+  color: #fff;
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.p-contact__number {
+  background-color: #fff;
+  align-items: flex-end;
+  text-align: center;
+  height: 80px;
+  font-size: 16px;
+  line-height: 1.68;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  color: #1B224C;
+  margin-bottom: 22px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .p-contact__number {
+    margin-left: -110px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-contact__number p {
+    margin-left: 20px;
+  }
+}
+
+.p-contact__number span {
+  font-size: 36px;
+  align-items: flex-end;
+  line-height: 1.1;
+}
+
+.u-font {
+  font-weight: 500;
+}
+
+.l-footer {
+  width: 100%;
+  height: 230px;
+  background-color: #1B224C;
+  font-family: "游ゴシック体";
+}
+
+.l-footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .l-footer__wrap {
+    max-width: 900px;
+  }
+}
+
+.p-footer__menu {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .p-footer__menu {
+    margin-top: 50px;
+    display: flex;
+  }
+}
+
+.p-footer__contact {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.p-footer__contact time {
+  margin-top: 13px;
+  color: #fff;
+}
+
+.c-footer__menu__item {
+  list-style: none;
+  padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .c-footer__menu__item {
+    padding-top: 0;
+    padding: 0 21.5px;
+    height: 23px;
+    border-right: solid 1px #fff;
+  }
+}
+
+.c-footer__menu__item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.c-footer__menu__item a:hover {
+  opacity: 0.8;
+}
+
+.c-footer__number {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.c-footer__number img {
+  margin-top: 30px;
+  background-color: #fff;
+  margin-right: 10px;
+  object-fit: contain;
+  height: 15px;
+}
+
+.c-footer__number p {
+  text-align: right;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.c-footer__button {
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  background-color: #fff;
+}
+
+.c-footer__button img {
+  object-fit: cover;
+  background-color: #fff;
+}
+
+.p-copyright__wrap {
+  align-items: center;
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  height: 36px;
+}
+
+@media (min-width: 768px) {
+  .p-copyright__wrap {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
