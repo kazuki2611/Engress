@@ -23,9 +23,10 @@
     padding-top: 30px;
     padding-left: 20px;
     background-color: #fff;
-    padding-bottom: 30px;
+    padding-bottom: 3000px;
    
     @include breakpoint(pc) {
+      padding-bottom: 30px;
       width: auto;
       display: flex;
       margin-left: auto;

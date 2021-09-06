@@ -356,11 +356,12 @@ html.is-open {
   padding-top: 30px;
   padding-left: 20px;
   background-color: #fff;
-  padding-bottom: 30px;
+  padding-bottom: 3000px;
 }
 
 @media (min-width: 1280px) {
   .l-header__right {
+    padding-bottom: 30px;
     width: auto;
     display: flex;
     margin-left: auto;
@@ -1214,6 +1215,7 @@ html.is-open {
 }
 
 .p-faq__wrap__list {
+  border-top: 1px solid #1b224c;
   width: 80%;
   margin: 0 auto;
 }
@@ -1236,10 +1238,8 @@ html.is-open {
   font-family: "游ゴシック体";
   font-weight: 500;
   color: #333333;
-  border-top: 1px solid #1b224c;
   padding: 20px;
   cursor: pointer;
-  display: block;
   position: relative;
   font-size: 14px;
   line-height: 1.85;
@@ -1265,12 +1265,12 @@ html.is-open {
 
 .op_plus {
   display: inline-block;
-  position: relative;
+  position: absolute;
   width: 18px;
   height: 18px;
   margin: 0 5px;
-  top: 10%;
-  left: 30%;
+  top: 30%;
+  left: 90%;
 }
 
 .op_plus:before,
@@ -1280,16 +1280,16 @@ html.is-open {
   background-color: #333;
   position: absolute;
   width: 18px;
-  height: 5px;
+  height: 3px;
   top: 7px;
   left: 0;
 }
 
 .op_plus:before {
-  width: 5px;
+  width: 3px;
   height: 18px;
   top: 0;
-  left: 7px;
+  left: 7.5px;
 }
 
 .op_plus.active::before {
