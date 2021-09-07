@@ -6,6 +6,7 @@
   padding: 20px;
   height: 80px;
   background-color: $title-color;
+  
   @include breakpoint(pc) {
     padding: 0;
 
