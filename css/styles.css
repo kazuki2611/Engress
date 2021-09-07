@@ -328,18 +328,18 @@ html.is-open {
 }
 
 .l-header {
-  position: relative;
+  position: fixed;
   font-family: "游ゴシック体";
   width: 100%;
   padding: 20px;
+  height: 80px;
+  background-color: #fff;
 }
 
 @media (min-width: 1280px) {
   .l-header {
     padding: 0;
-    margin-top: 20px;
-    height: auto;
-    position: static;
+    height: 80px;
     align-items: center;
     display: flex;
   }
@@ -347,8 +347,7 @@ html.is-open {
 
 @media (min-width: 1280px) {
   .l-header {
-    margin-top: 27px;
-    margin-left: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -365,6 +364,7 @@ html.is-open {
     width: auto;
     display: flex;
     margin-left: auto;
+    align-items: center;
     margin-top: 0;
   }
 }
@@ -404,6 +404,7 @@ html.is-open {
 @media (min-width: 1280px) {
   .l-header__wrap {
     padding-top: 0;
+    height: 80px;
     position: static;
     display: flex;
     width: 100%;
@@ -645,6 +646,7 @@ html.is-open {
   background-size: cover;
   height: 100%;
   width: 100%;
+  margin-top: 80px;
 }
 
 @media (min-width: 1280px) {
@@ -1244,6 +1246,35 @@ html.is-open {
   font-size: 14px;
   line-height: 1.85;
   width: 100%;
+}
+
+.c-faq__wrap__title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 2px;
+  /*縦線に*/
+  transform: rotate(90deg);
+  background: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.c-faq__wrap__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  /*横線*/
+  width: 15px;
+  height: 2px;
+  background: #000;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-faq__wrap__title.active::before {
+  display: none;
 }
 
 .c-faq__text {

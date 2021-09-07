@@ -83,7 +83,6 @@
   }
   section {
     position: absolute;
-  
   }
 }
 .c-flow {
@@ -172,6 +171,7 @@
     text-align: center;
     color: $base-color;
     margin-top: 60px;
+    
     @include breakpoint(tablet) {
       margin-top: 70px;
     }
@@ -192,7 +192,32 @@
       font-size: 14px;
       line-height: 1.85;
       width: 100%;
-      
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        width: 15px;
+        height: 2px;
+        /*縦線に*/
+        transform: rotate(90deg);
+        background: #000;
+        transition: all 0.3s ease-in-out;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        /*横線*/
+        width: 15px;
+        height: 2px;
+        background: #000;
+        transition: all 0.2s ease-in-out;
+      }
+      &.active::before {
+      display: none;
+      }
     }
   }
   &__text {
@@ -227,7 +252,6 @@
   margin: 0 5px;
   top: 30%;
   left: 90%;
- 
 }
 .op_plus:before,
 .op_plus:after {
