@@ -1,0 +1,30 @@
+.p-table {
+  // margin-top: 30px;
+  // padding: 10px 20px 0 20px;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: bold;
+
+  // margin: 100px auto 0 auto;
+  width: 90%;
+  // border-collapse: collapse;
+  color: #333333;
+  tr {
+    background-color: #f8f8f8;
+  }
+  th {
+    display: table-cell;
+    width: 30%;
+    text-align: left;
+    margin-top: 20px;
+    // padding: 28px 0px 27px 30px;
+  }
+  td {
+    text-align: initial;
+    display: table-cell;
+    // padding: 28px 106px 27px 30px;
+    width: 60%;
+    font-weight: bold;
+    // padding: 28px 405px 27px 30px;
+  }
+}

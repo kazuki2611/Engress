@@ -1,0 +1,11 @@
+.p-blog {
+  &__wrap {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+}

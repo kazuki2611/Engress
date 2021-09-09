@@ -1100,32 +1100,6 @@ html.is-open {
   font-weight: bold;
 }
 
-.p-flow__title {
-  font-size: 36px;
-  line-height: 1.3;
-}
-
-.p-flow__wrap {
-  display: flex;
-  align-items: center;
-  font-family: "游ゴシック体";
-  height: 64px;
-  width: 90%;
-  margin: 0 auto;
-  background-color: #f8f8f8;
-  margin-top: 8px;
-}
-
-@media (min-width: 768px) {
-  .p-flow__wrap {
-    max-width: 900px;
-  }
-}
-
-.p-flow section {
-  position: absolute;
-}
-
 .c-flow__title {
   color: #1b224c;
   text-align: center;
@@ -1222,6 +1196,32 @@ html.is-open {
   margin: 0 auto;
 }
 
+.p-flow__title {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.p-flow__wrap {
+  display: flex;
+  align-items: center;
+  font-family: "游ゴシック体";
+  height: 64px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .p-flow__wrap {
+    max-width: 900px;
+  }
+}
+
+.p-flow section {
+  position: absolute;
+}
+
 .c-faq__title {
   font-family: "游ゴシック体";
   font-weight: bold;
@@ -1292,40 +1292,6 @@ html.is-open {
 
 .u-border {
   border-bottom: 1px solid #1b224c;
-}
-
-.op_plus {
-  display: inline-block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  margin: 0 5px;
-  top: 30%;
-  left: 90%;
-}
-
-.op_plus:before,
-.op_plus:after {
-  display: block;
-  content: "";
-  background-color: #333;
-  position: absolute;
-  width: 18px;
-  height: 3px;
-  top: 7px;
-  left: 0;
-}
-
-.op_plus:before {
-  width: 3px;
-  height: 18px;
-  top: 0;
-  left: 7.5px;
-}
-
-.op_plus.active::before {
-  display: none;
-  transform: 0.5;
 }
 
 @media (min-width: 768px) {
@@ -1601,5 +1567,32 @@ html.is-open {
     max-width: 900px;
     margin: 0 auto;
   }
+}
+
+.p-hero__price, .p-hero__news, .p-hero__form {
+  margin-top: 80px;
+  background-image: url(../image/plan.png);
+  background-position: center;
+  background-size: cover;
+  height: 221px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-hero__price__title {
+  font-size: 32px;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  color: #fff;
+}
+
+.p-hero__news {
+  background-image: url(../image/news.png);
+}
+
+.p-hero__form {
+  background-image: url(../image/price.png);
 }
 /*# sourceMappingURL=styles.css.map */

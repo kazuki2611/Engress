@@ -1,0 +1,59 @@
+.c-flow {
+  &__title {
+    color: #1b224c;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.38;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include breakpoint(tablet) {
+      margin-top: 58px;
+      margin-bottom: 50px;
+    }
+  }
+  &__number {
+    width: 64px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5a623;
+    color: $title-color;
+    display: flex;
+  }
+  &__title2 {
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    color: #1b224c;
+    font-size: 14px;
+    width: 25%;
+    height: 64px;
+    align-items: center;
+    display: flex;
+    padding-left: 1vw;
+    @include breakpoint(tablet) {
+      padding-left: 20px;
+      line-height: 2.2;
+    }
+  }
+  &__text {
+    background-color: #f8f8f8;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 75%;
+    @include breakpoint(tablet) {
+      line-height: 1.68;
+      font-size: 16px;
+      padding-left: 50px;
+    }
+  }
+  &__border {
+    width: 1px;
+    height: 30px;
+    background-color: #c3c3c3;
+  }
+}

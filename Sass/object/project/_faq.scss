@@ -1,0 +1,20 @@
+.p-faq__inner {
+  display: flex;
+}
+.p-faq__wrap {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @include breakpoint(tablet) {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  &__list {
+    border-top: 1px solid #1b224c;
+    // display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,70 @@
+.c-faq {
+  &__title {
+    font-family: "游ゴシック体";
+    font-weight: bold;
+    text-align: center;
+    color: $base-color;
+    margin-top: 60px;
+    
+    @include breakpoint(tablet) {
+      margin-top: 70px;
+    }
+  }
+  &__wrap {
+    &__title {
+      font-family: "游ゴシック体";
+      font-weight: 500;
+      color: #333333;
+      // border-top: 1px solid #1b224c;
+      padding: 20px;
+      cursor: pointer;
+      // display: block;
+      // align-items: center;
+      // justify-content: center;
+      // display: flex;
+      position: relative;
+      font-size: 14px;
+      line-height: 1.85;
+      width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        width: 15px;
+        height: 2px;
+        /*縦線に*/
+        transform: rotate(90deg);
+        background: #000;
+        transition: all 0.3s ease-in-out;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        /*横線*/
+        width: 15px;
+        height: 2px;
+        background: #000;
+        transition: all 0.2s ease-in-out;
+      }
+      &.active::before {
+      display: none;
+      }
+    }
+  }
+  &__text {
+    font-family: "游ゴシック体";
+    font-weight: 500;
+    line-height: 1.85;
+    color: #444444;
+
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: left;
+    display: none;
+    margin-bottom: 15px;
+  }
+}
