@@ -1,0 +1,50 @@
+.p-contact {
+  @extend.p-service__plan;
+  background-image: url(../image/cta-1.png);
+  text-align: center;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  height: 256px;
+  margin-bottom: 0;
+  a {
+    text-decoration: underline;
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: "游ゴシック体";
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  &__number {
+    background-color: $title-color;
+    align-items: flex-end;
+    // gap: 20px;
+    text-align: center;
+    height: 80px;
+    font-size: 16px;
+    line-height: 1.68;
+    font-family: "游ゴシック体";
+    font-weight: bold;
+    color: $base-color;
+    margin-bottom: 22px;
+    margin-top: 20px;
+    @include breakpoint(tablet) {
+      margin-left: -110px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      @include breakpoint(tablet) {
+        margin-left: 20px;
+      }
+    }
+    span {
+      font-size: 36px;
+      align-items: flex-end;
+      line-height: 1.1;
+    }
+  }
+}

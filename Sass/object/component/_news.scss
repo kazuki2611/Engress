@@ -1,0 +1,26 @@
+.c-news {
+  &__title {
+    color: $base-color;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 36px;
+    @include breakpoint(tablet) {
+      margin-top: 90px;
+      text-align: left;
+    }
+  }
+  &__wrap {
+    &__text {
+      font-family: "游ゴシック体";
+      font-weight: 500;
+      color: $base-color;
+      margin-top: 20px;
+      text-decoration: underline;
+      time {
+        font-family: "游ゴシック体";
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -655,6 +655,26 @@ html.is-open {
   }
 }
 
+.p-hero__price, .p-hero__news, .p-hero__form {
+  margin-top: 80px;
+  background-image: url(../image/plan.png);
+  background-position: center;
+  background-size: cover;
+  height: 221px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-hero__news {
+  background-image: url(../image/news.png);
+}
+
+.p-hero__form {
+  background-image: url(../image/price.png);
+}
+
 .c-title, .c-contact__title {
   font-family: "游ゴシック体";
   font-weight: bold;
@@ -709,6 +729,13 @@ html.is-open {
   text-decoration: none;
   color: #fff;
   border-bottom: solid 1px #fff;
+}
+
+.c-hero__price__title {
+  font-size: 32px;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  color: #fff;
 }
 
 .p-concept {
@@ -1567,32 +1594,5 @@ html.is-open {
     max-width: 900px;
     margin: 0 auto;
   }
-}
-
-.p-hero__price, .p-hero__news, .p-hero__form {
-  margin-top: 80px;
-  background-image: url(../image/plan.png);
-  background-position: center;
-  background-size: cover;
-  height: 221px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.c-hero__price__title {
-  font-size: 32px;
-  font-family: "游ゴシック体";
-  font-weight: bold;
-  color: #fff;
-}
-
-.p-hero__news {
-  background-image: url(../image/news.png);
-}
-
-.p-hero__form {
-  background-image: url(../image/price.png);
 }
 /*# sourceMappingURL=styles.css.map */

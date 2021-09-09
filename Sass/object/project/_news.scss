@@ -1,0 +1,10 @@
+.p-news {
+  &__wrap {
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+}

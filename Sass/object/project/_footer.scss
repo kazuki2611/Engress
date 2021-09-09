@@ -1,0 +1,17 @@
+.p-footer {
+  &__menu {
+    margin-top: 40px;
+    @include breakpoint(tablet) {
+      margin-top: 50px;
+      display: flex;
+    }
+  }
+  &__contact {
+    text-align: right;
+    margin-top: 40px;
+    time {
+      margin-top: 13px;
+      color: $title-color;
+    }
+  }
+}

@@ -9,3 +9,23 @@
     height: 476px;
   }
 }
+.p-hero__price {
+  margin-top: 80px;
+  background-image: url(../image/plan.png);
+  background-position: center;
+  background-size: cover;
+  height: 221px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-hero__news {
+  @extend.p-hero__price;
+  background-image: url(../image/news.png);
+}
+.p-hero__form {
+  @extend.p-hero__price;
+  background-image: url(../image/price.png);
+}

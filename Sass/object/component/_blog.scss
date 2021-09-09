@@ -1,0 +1,37 @@
+.c-blog {
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 80px;
+    @include breakpoint(tablet) {
+      text-align: left;
+      margin-top: 90px;
+    }
+  }
+
+  &__wrap {
+    &__text {
+      p {
+        text-decoration: underline;
+      }
+      position: relative;
+      margin-left: 20px;
+      font-family: "游ゴシック体";
+      font-weight: bold;
+      color: $base-color;
+
+      time {
+        position: absolute;
+        top: 85%;
+        font-size: 12px;
+        font-family: "游ゴシック体";
+        font-weight: 500;
+      }
+    }
+    &__image {
+      object-fit: cover;
+      width: 150px;
+      height: auto;
+    }
+  }
+}

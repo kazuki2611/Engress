@@ -1,0 +1,10 @@
+.c-contact {
+  &__title {
+    @extend.c-service__plan__title;
+    @extend.c-title;
+  }
+  &__button {
+    @extend.c-service__plan__button;
+    @extend.c-button;
+  }
+}

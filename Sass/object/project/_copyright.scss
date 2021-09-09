@@ -1,0 +1,14 @@
+.p-copyright {
+  &__wrap {
+    align-items: center;
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    height: 36px;
+
+    @include breakpoint(tablet) {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+}
