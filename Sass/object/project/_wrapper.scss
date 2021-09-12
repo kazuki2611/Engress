@@ -1,8 +1,11 @@
 .p-wrapper {
+  width: 80%;
+  margin: 0 auto;
   @include breakpoint(tablet) {
     gap: 50px;
     display: flex;
     max-width: 900px;
     margin: 0 auto;
+    justify-content: center;
   }
 }

@@ -1,344 +1,139 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="日本人へのTOEFL指導歴豊かな講師陣の
-  コーチング型TOEFLスクール">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お知らせ</title>
-  </title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="Sass/styles.scss">
-  <meta name="robots" content="noindex">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="./js/hamburger.js"></script>
-  <script src="./js/faq.js"></script>
-
-  <link rel="icon" href="./image/logo02.png">
+<?php get_header(); ?>
 
 
-
-
-
-  <?php wp_head(); ?>
-</head>
-
-<body>
-  <header class="l-header">
-
-
-
-
-    <!-- <div class="l-header__left"> -->
-
-
-
-    <div class="l-header__inner">
-
-      <div class="l-header__logo">
-        <img src="./image/logo.png">
-      </div>
-      <button class="p-hamburger  is-hamburger ">
-        <span></span>
-
-      </button>
-
-
-      <div class="p-black-bg" id="js-black-bg"></div>
-
-    </div>
-
-
-    <!-- </div> -->
-
-    <div class="l-header__wrap">
-
-
-
-      <nav class="p-dropdown-menu">
-        <div class="l-header__logo__nav">
-          <img src="./image/logo.png">
-        </div>
-        <ul class="p-dropdown-menu__list">
-          <li class="c-dropdown__menu__item">
-            <a href="./index.html">
-              ホーム
-            </a>
-          </li>
-        </ul>
-        <ul class="p-dropdown-menu__list">
-          <li class="c-dropdown__menu__item">
-            <a href="./news.html">
-              お知らせ
-            </a>
-          </li>
-        </ul>
-        <ul class="p-dropdown-menu__list">
-          <li class="c-dropdown__menu__item">
-            <a href="./blog.html">
-              ブログ
-            </a>
-          </li>
-        </ul>
-        <ul class="p-dropdown-menu__list">
-          <li class="c-dropdown__menu__item">
-            <a href="./price.html">
-              コース・料金
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="l-header__right">
-        <div class="l-header__right__wrap">
-
-          <div class="c-header__right__contact">
-            <p>
-              平日08:00〜20:00
-            </p>
-          </div>
-          <div class="c-header__right__number">
-            <img src="./image/logo3.png">
-            <p>
-              0123-456-7890
-            </p>
-          </div>
-        </div>
-        <div class="l-header__right__wrap">
-          <button class="c-header__right__button c-button">
-            <a href="./form.html">
-
-              資料請求
-            </a>
-          </button>
-          <button class="c-header__right__button__blue c-button">
-            <a href="./form.html">
-              お問い合わせ
-
-            </a>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </header>
-  <main class="l-main ">
-    <div class="p-hero__news">
-      <h1 class="c-hero__news__title c-hero__price__title c-title">
-        お知らせ
+<main class="l-main ">
+  <div class="p-hero__news">
+    <h1 class="c-hero__news__title c-hero__price__title c-title">
+      お知らせ
+    </h1>
+  </div>
+  <div class="p-hero__archive">
+    <div class="p-hero__archive__wrap">
+      <h1 class="c-hero__archive__title">
+        お知らせ一覧
       </h1>
+
+
+
+
+
+
+
+
+      <?php
+      if (have_posts()) :
+        while (have_posts()) :
+          the_post(); ?>
+          <div class="p-hero__archive__box u-border2">
+            <time>
+            <?php the_time('Y.m.d'); ?>
+            </time>
+            <p class="c-hero__archive__box__title ">
+              <a href=" <?php echo get_post_type_archive_link('news'); ?>">
+              <?php the_title(); ?>
+
+              </a>
+            </p>
+          </div>
+        <?php endwhile;
+      else :
+        ?><p>表示する記事がありません</p><?php
+                            endif;
+                              ?>
     </div>
-    <div class="p-hero__archive">
-      <div class="p-hero__archive__wrap">
-        <h1 class="c-hero__archive__title">
-          お知らせ一覧
-        </h1>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+    <div class="p-page">
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+      <a class="c-page-button" href="#">1</a>
+      <a class="c-page-button" href="#">2</a>
+      <a class="c-page-button" href="#">3</a>
+      <a class="c-page-button" href="#">4</a>
+      <a class="c-page-button" href="#">5</a>
+      <a class="c-page-button" href="#">6</a>
+      <a class="c-page-button" href="#">7</a>
+      <a class="c-page-button" href="#">8</a>
+      <a class="c-page-button u-margin" title="Page 9" href="#">9</a>
+      <a class="p-page__link" href="#">
+    </div>
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+</main>
+<section class="p-contact">
+  <h3 class="c-contact__title">
+    まずは無料で資料請求から
+  </h3>
+  <button class="c-service__plan__button c-button">
+    料金を見てみる
+  </button>
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+  <a href="./form.html">
+    お問い合わせ
+  </a>
+</section>
+<section class="p-number">
+  <div class="p-contact__number">
+    <p>お電話でのお問い合わせはこちら</p>
+    <span>
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+      <p>0123-456-7890</p>
+    </span>
+    <p class="u-font">平日 08:00~20:00</p>
+  </div>
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+</section>
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
 
-            </a>
-          </p>
-        </div>
-        <div class="p-hero__archive__box u-border2">
-          <time>
-            2020-12-30
-          </time>
-          <p class="c-hero__archive__box__title ">
-            <a href="./single-news.html">
-              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
 
-            </a>
-          </p>
-        </div>
+
+<footer class="l-footer">
+  <div class="l-footer__wrap ">
+    <ul class="p-footer__menu">
+      <li class="c-footer__menu__item">
+        <a href="./index.html">
+          ホーム
+        </a>
+      </li>
+      <li class="c-footer__menu__item">
+        <a href="./news.html">
+          お知らせ
+        </a>
+      </li>
+      <li class="c-footer__menu__item">
+        <a href="./blog.html">
+          ブログ
+        </a>
+      </li>
+      <li class="c-footer__menu__item">
+        <a href="./news.html">
+          コース・料金
+        </a>
+      </li>
+    </ul>
+    <div class="p-footer__contact">
+      <button class="c-footer__button">
+        <a href="#">
+          <img src="./image/logo.png">
+        </a>
+      </button>
+      <div class="c-footer__number">
+        <img src="./image/logo3.png">
+        <p>
+          0123-456-7890
+        </p>
       </div>
-      <div class="p-page">
-            
-        
-        <a class="c-page-button"  href="#">1</a>
-        <a class="c-page-button"  href="#">2</a>
-        <a class="c-page-button"  href="#">3</a>
-        <a class="c-page-button"  href="#">4</a>
-        <a class="c-page-button"  href="#">5</a>
-        <a class="c-page-button"  href="#">6</a>
-        <a class="c-page-button"  href="#">7</a>
-        <a class="c-page-button"  href="#">8</a>
-        <a class="c-page-button u-margin" title="Page 9" href="#">9</a>
-        <a class="p-page__link" href="#">
+      <time>
+        平日08:00~20:00
+      </time>
     </div>
-
-  </main>
-  <section class="p-contact">
-    <h3 class="c-contact__title">
-      まずは無料で資料請求から
-    </h3>
-    <button class="c-service__plan__button c-button">
-      料金を見てみる
-    </button>
-
-    <a href="./form.html">
-      お問い合わせ
-    </a>
-  </section>
-  <section class="p-number">
-    <div class="p-contact__number">
-      <p>お電話でのお問い合わせはこちら</p>
-      <span>
-
-        <p>0123-456-7890</p>
-      </span>
-      <p class="u-font">平日 08:00~20:00</p>
-    </div>
-
-  </section>
-
-
-
-
-
-  <footer class="l-footer">
-    <div class="l-footer__wrap ">
-      <ul class="p-footer__menu">
-        <li class="c-footer__menu__item">
-          <a href="./index.html">
-            ホーム
-          </a>
-        </li>
-        <li class="c-footer__menu__item">
-          <a href="./news.html">
-            お知らせ
-          </a>
-        </li>
-        <li class="c-footer__menu__item">
-          <a href="./blog.html">
-            ブログ
-          </a>
-        </li>
-        <li class="c-footer__menu__item">
-          <a href="./news.html">
-            コース・料金
-          </a>
-        </li>
-      </ul>
-      <div class="p-footer__contact">
-        <button class="c-footer__button">
-          <a href="#">
-            <img src="./image/logo.png">
-          </a>
-        </button>
-        <div class="c-footer__number">
-          <img src="./image/logo3.png">
-          <p>
-            0123-456-7890
-          </p>
-        </div>
-        <time>
-          平日08:00~20:00
-        </time>
-      </div>
-    </div>
-  </footer>
-  <section class="p-copyright">
-    <div class="p-copyright__wrap">
-      <p class="c-copyright__wrap__text">
-        © 2020 Engress.
-      </p>
-    </div>
-  </section>
-  <?php wp_footer(); ?>
+  </div>
+</footer>
+<section class="p-copyright">
+  <div class="p-copyright__wrap">
+    <p class="c-copyright__wrap__text">
+      © 2020 Engress.
+    </p>
+  </div>
+</section>
+<?php wp_footer(); ?>
 
 </body>

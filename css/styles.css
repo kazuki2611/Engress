@@ -1277,7 +1277,6 @@ html.is-open {
   color: #333333;
   padding: 20px;
   cursor: pointer;
-  position: relative;
   font-size: 14px;
   line-height: 1.85;
   width: 100%;
@@ -1329,12 +1328,18 @@ html.is-open {
   border-bottom: 1px solid #1b224c;
 }
 
+.p-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .p-wrapper {
     gap: 50px;
     display: flex;
     max-width: 900px;
     margin: 0 auto;
+    justify-content: center;
   }
 }
 
@@ -1372,16 +1377,16 @@ html.is-open {
   color: #1B224C;
 }
 
-.c-blog__wrap__text p {
-  text-decoration: underline;
-}
-
 .c-blog__wrap__text time {
   position: absolute;
   top: 85%;
   font-size: 12px;
   font-family: "游ゴシック体";
   font-weight: 500;
+}
+
+.c-blog__wrap__text p a {
+  color: #1B224C;
 }
 
 .c-blog__wrap__image {
@@ -1428,6 +1433,10 @@ html.is-open {
   font-family: "游ゴシック体";
   font-weight: 500;
   font-size: 16px;
+}
+
+.c-news__wrap__text p a {
+  color: #1B224C;
 }
 
 .p-contact {
@@ -1623,11 +1632,14 @@ html.is-open {
   border-top: solid 1px #D5D5D5;
   height: 64px;
   align-items: center;
+  display: block;
+  padding-top: 10px;
 }
 
 @media (min-width: 768px) {
   .p-hero__archive__box {
     display: flex;
+    padding-top: 0;
   }
 }
 

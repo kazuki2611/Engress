@@ -11,9 +11,7 @@
 
   &__wrap {
     &__text {
-      p {
-        text-decoration: underline;
-      }
+      
       position: relative;
       margin-left: 20px;
       font-family: "游ゴシック体";
@@ -26,6 +24,13 @@
         font-size: 12px;
         font-family: "游ゴシック体";
         font-weight: 500;
+      }
+      p {
+      
+      a {
+        
+        color: $base-color;
+      }
       }
     }
     &__image {
