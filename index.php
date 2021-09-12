@@ -9,24 +9,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engress</title>
   </title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="Sass/styles.scss">
+  <link rel="stylesheet" href="http://mysite.local/wp-content/themes/Engress/css/styles.css">
+  <link rel="stylesheet" href="http://mysite.local/wp-content/themes/Engress/Sass/styles.scss">
   <meta name="robots" content="noindex">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="./js/hamburger.js"></script>
-  <script src="./js/faq.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://mysite.local/wp-content/themes/Engress/js/script.js"></script>
+  <script src="http://mysite.local/wp-content/themes/Engress/js/hamburger.js"></script>
+  <script src="http://mysite.local/wp-content/themes/Engress/js/faq.js"></script>
 
-  <link rel="icon" href="./image/logo02.png">
-
-
+  <link rel="icon" href="http://mysite.local/wp-content/themes/Engress/image/logo02.png">
 
 
 
+
+  <?php wp_head(); ?>
 
 </head>
 
 <body>
+
   <header class="l-header">
 
 
@@ -136,7 +137,7 @@
       </p>
       <button class="c-hero__button c-button">
         <a href="./form.html">
-        
+
           資料請求
         </a>
       </button>
@@ -460,7 +461,7 @@
                 <i class="op_plus"></i>
   
               </div> -->
-            <!-- </dt>
+              <!-- </dt>
             <div class="section">
 
               <i class="op_plus"></i>
@@ -509,9 +510,9 @@
           </dl>
           <dl class="p-faq__wrap__list u-border">
             <dt class="c-faq__wrap__title is-border ">
-            
+
               TOEFL以外の海外大学合格のサポートもしてもらえるのでしょうか？
-             
+
               <!-- <div class="section">
   
                 <i class="op_plus"></i>
@@ -577,7 +578,13 @@
               2020-12-01
             </time>
             <p>
-              2021年のスケジュールについて
+             
+              <a >
+             
+              <?php echo $home_url;?>
+            </a>
+              
+
             </p>
           </div>
         </div>
@@ -680,48 +687,11 @@
   <section class="p-copyright">
     <div class="p-copyright__wrap">
       <p class="c-copyright__wrap__text">
-        © 2020 Engress. 
+        © 2020 Engress.
       </p>
     </div>
   </section>
-  <!-- <nav class="l-sidebar">
-    <img src="./image/logo.png" class="l-sidebar__title">
-    <ul class="p-global-nav">
-      <li class="p-global-nav__item">
-        <a href="#">ホーム</a>
-      </li>
-      <li class="p-global-nav__item">
-        <a href="#">お知らせ</a>
-      </li>
-      <li class="p-global-nav__item">
-        <a href="#">ブログ</a>
-      </li>
-      <li class="p-global-nav__item">
-        <a href="#">コース・料金</a>
-      </li>
 
 
-    </ul>
-    <div class="l-sidebar__inner">
-      <button class="c-button">
-        <a href="#">資料請求</a>
-      </button>
-      <button class="c-button__blue">
-        <a href="#">お問い合わせ</a>
-      </button>
-    </div>
-    <div class="l-sidebar__wrap">
-      <img src="./image/logo3.png">
-      <p>
-        0123-456-7890 <br>
-        <span>
-
-          平日08:00〜20:00
-        </span>
-      </p>
-
-
-    </div>
-  </nav> -->
- 
+  <?php wp_footer(); ?>
 </body>

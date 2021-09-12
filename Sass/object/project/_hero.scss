@@ -29,3 +29,7 @@
   @extend.p-hero__price;
   background-image: url(../image/price.png);
 }
+.p-hero__blog {
+  @extend.p-hero__price;
+  background-image: url(../image/blog.png);
+}

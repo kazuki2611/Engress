@@ -323,6 +323,10 @@ html {
   overflow-x: hidden;
 }
 
+html main {
+  margin-top: 80px;
+}
+
 html.is-open {
   overflow-y: hidden;
 }
@@ -655,7 +659,7 @@ html.is-open {
   }
 }
 
-.p-hero__price, .p-hero__news, .p-hero__form {
+.p-hero__price, .p-hero__news, .p-hero__form, .p-hero__blog {
   margin-top: 80px;
   background-image: url(../image/plan.png);
   background-position: center;
@@ -673,6 +677,10 @@ html.is-open {
 
 .p-hero__form {
   background-image: url(../image/price.png);
+}
+
+.p-hero__blog {
+  background-image: url(../image/blog.png);
 }
 
 .c-title, .c-contact__title {
@@ -1594,5 +1602,146 @@ html.is-open {
     max-width: 900px;
     margin: 0 auto;
   }
+}
+
+.p-hero__archive {
+  margin-top: 50px;
+}
+
+.p-hero__archive__wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .p-hero__archive__wrap {
+    max-width: 900px;
+  }
+}
+
+.p-hero__archive__box {
+  border-top: solid 1px #D5D5D5;
+  height: 64px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .p-hero__archive__box {
+    display: flex;
+  }
+}
+
+.p-hero__archive__box time {
+  width: 20%;
+  align-items: center;
+  display: flex;
+}
+
+.p-hero__archive__box a {
+  color: #1B224C;
+  font-weight: 500;
+}
+
+.c-hero__archive__title {
+  text-align: center;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.c-hero__archive__box__title {
+  font-weight: 500;
+  font-family: "游ゴシック体";
+}
+
+.u-border2 {
+  border-bottom: solid 1px #D5D5D5;
+}
+
+.p-page {
+  height: 170.5px;
+  display: flex;
+  justify-content: center;
+}
+
+.c-page-button {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 105.5px;
+  margin-right: 15px;
+  padding-top: 5px;
+  height: 35px;
+  width: 35px;
+  border: solid #cccccc 2px;
+  color: #707070;
+  font-weight: bold;
+}
+
+.l-main__news {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .l-main__news {
+    max-width: 900px;
+  }
+}
+
+.l-main__blog__archive__wrap {
+  width: 80%;
+  margin-top: 80px;
+  margin: 0 auto;
+  font-family: "游ゴシック体";
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .l-main__blog__archive__wrap {
+    max-width: 900px;
+  }
+}
+
+.l-main__blog__archive__wrap h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1B224C;
+}
+
+.p-main__blog__box {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .p-main__blog__box {
+    display: flex;
+    height: 150px;
+  }
+}
+
+.p-main__blog__box img {
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .p-main__blog__box img {
+    width: 30%;
+  }
+}
+
+.p-main__blog__text {
+  margin-left: 30px;
+}
+
+.p-main__blog__text a {
+  color: #1B224C;
 }
 /*# sourceMappingURL=styles.css.map */

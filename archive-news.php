@@ -23,7 +23,7 @@
 
 
 
-
+  <?php wp_head(); ?>
 </head>
 
 <body>
@@ -127,9 +127,140 @@
   <main class="l-main ">
     <div class="p-hero__news">
       <h1 class="c-hero__news__title c-hero__price__title c-title">
-      お知らせ
+        お知らせ
       </h1>
     </div>
+    <div class="p-hero__archive">
+      <div class="p-hero__archive__wrap">
+        <h1 class="c-hero__archive__title">
+          お知らせ一覧
+        </h1>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+        <div class="p-hero__archive__box u-border2">
+          <time>
+            2020-12-30
+          </time>
+          <p class="c-hero__archive__box__title ">
+            <a href="./single-news.html">
+              お知らせテキストお知らせテキストお知らせテキストお知らせテキ
+
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="p-page">
+            
+        
+        <a class="c-page-button"  href="#">1</a>
+        <a class="c-page-button"  href="#">2</a>
+        <a class="c-page-button"  href="#">3</a>
+        <a class="c-page-button"  href="#">4</a>
+        <a class="c-page-button"  href="#">5</a>
+        <a class="c-page-button"  href="#">6</a>
+        <a class="c-page-button"  href="#">7</a>
+        <a class="c-page-button"  href="#">8</a>
+        <a class="c-page-button u-margin" title="Page 9" href="#">9</a>
+        <a class="p-page__link" href="#">
+    </div>
+
   </main>
   <section class="p-contact">
     <h3 class="c-contact__title">
@@ -208,4 +339,6 @@
       </p>
     </div>
   </section>
+  <?php wp_footer(); ?>
+
 </body>
