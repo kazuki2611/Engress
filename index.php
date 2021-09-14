@@ -140,35 +140,39 @@
       TOEFL成功事例
     </h1>
     <div class="p-model__wrap">
-      <div class="p-model__box">
-        <p class="c-model__box__title c-title">
-          TOEFL iBT 100点を突破してコロンビア大学大学院に進学できました！
-        </p>
-        <img src="./image/model01.png"> </img>
-        <div class="p-model__inner">
-          <div class="c-model__inner__work">
-            <p>
+      <?php while (have_posts()) : ?>
+        <div class="p-model__box">
+          <p class="c-model__box__title c-title">
 
-              会社員
-            </p>
-          </div>
-          <div class="c-model__inner__name">
-            <p>
-              T.Fujiyamaさん
+            <?php the_post(); ?>
+            <?php the_title(); ?>
+          </p>
+          <img src="<?php the_field('画像'); ?>"> </img>
+          <div class="p-model__inner">
+            <div class="c-model__inner__work">
+              <p>
 
-            </p>
+              <?php the_field('職業'); ?>
+              </p>
+            </div>
+            <div class="c-model__inner__name">
+              <p>
+              <?php the_field('名前'); ?>
+
+              </p>
+            </div>
           </div>
+          <p class="c-model__box__text">
+
+
+          <?php the_field('成果'); ?>
+
+          </p>
+
+
         </div>
-        <p class="c-model__box__text">
-
-
-          3ヶ月でTOEFL80→108点
-
-        </p>
-
-
-      </div>
-      <div class="p-model__box">
+      <?php endwhile; ?>
+      <!-- <div class="p-model__box">
         <p class="c-model__box__title c-title">
           半年でTOEFL 40点→100点を達成！コロンビア大学大学院に合格
         </p>
@@ -224,7 +228,7 @@
         </p>
 
 
-      </div>
+      </div> -->
   </section>
   <section class="p-flow">
     <h1 class="c-flow__title c-title">
@@ -417,13 +421,13 @@
 
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <div class="p-blog__wrap">
-          <?php the_post_thumbnail('full'); ?>
+            <?php the_post_thumbnail('full'); ?>
             <div class="c-blog__wrap__text">
               <p>
                 <a href="<?php the_permalink(); ?>">
-                <?php the_title(); ?>
+                  <?php the_title(); ?>
                 </a>
-               
+
               </p>
               <time>
                 <?php the_time('Y.m.d'); ?>
@@ -442,14 +446,14 @@
       <h2 class="c-news__title c-title">
         お知らせ
       </h2>
-        <?php $args = array(
+      <?php $args = array(
         'numberposts' => 3,    //表示する記事の数の指定
         'post_type' => 'news'   //投稿タイプの指定
       );
       $the_query = new WP_query($args);
       if ($the_query->have_posts()) :
       ?>
-       <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <div class="p-news__wrap">
 
             <div class="c-news__wrap__text">
@@ -460,7 +464,7 @@
               <p>
                 <!-- リンク -->
                 <a href="<?php the_permalink(); ?>">
-                タイトル
+                  タイトル
                   <?php the_title(); ?>
 
                 </a>

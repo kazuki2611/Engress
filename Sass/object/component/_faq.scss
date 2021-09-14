@@ -18,14 +18,15 @@
       // border-top: 1px solid #1b224c;
       padding: 20px;
       cursor: pointer;
-      // display: block;
-      // align-items: center;
-      // justify-content: center;
-      // display: flex;
-      // position: relative;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      position: relative;
       font-size: 14px;
       line-height: 1.85;
       width: 100%;
+      z-index: 10;
       &::before {
         content: "";
         position: absolute;

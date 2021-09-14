@@ -22,7 +22,7 @@
 
 
 
- <?php wp_head(); ?>
+  <?php wp_head(); ?>
 
 </head>
 
@@ -58,7 +58,7 @@
     <div class="l-header__wrap">
 
 
-
+<!-- 
       <!-- <nav class="p-dropdown-menu">
         <div class="l-header__logo__nav">
           <img src="./image/logo.png">
@@ -91,8 +91,27 @@
             </a>
           </li>
         </ul>
-      </nav> -->
-      <?php wp_nav_menu(); ?>
+      </nav> --> 
+      <?php
+      $defaults = array(
+        // 'menu'            => 'グローバルメニュー',
+        'menu_class'      => 'p-dropdown-menu__list p-dropdown-menu',
+       
+        'container'       => 'div',
+        'container_class' => 'p-dropdown-menu',
+        'container_id'    => '',
+       
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'echo'            => true,
+        'depth'           => 0,
+        'walker'          => '',
+        'theme_location'  => '',
+        'items_wrap'      => '<ul  class="%2$s">%3$s</ul>',
+      );
+      wp_nav_menu($defaults); ?>
       <div class="l-header__right">
         <div class="l-header__right__wrap">
 

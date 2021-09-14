@@ -561,6 +561,39 @@ html.is-open {
   }
 }
 
+.p-dropdown-menu__list li {
+  padding: 10px 0 10px 20px;
+  border-bottom: solid 1px #fff;
+  list-style: none;
+  background-color: #1b224c;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8;
+  display: block;
+  cursor: pointer;
+}
+
+.p-dropdown-menu__list li:hover {
+  opacity: 0.7;
+}
+
+.p-dropdown-menu__list li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 1280px) {
+  .p-dropdown-menu__list li {
+    border-bottom: 0;
+    background-color: transparent;
+  }
+  .p-dropdown-menu__list li a {
+    color: #000;
+  }
+}
+
 .p-dropdown-menu__list a {
   text-decoration: none;
   color: #000;
@@ -1277,9 +1310,15 @@ html.is-open {
   color: #333333;
   padding: 20px;
   cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
   font-size: 14px;
   line-height: 1.85;
   width: 100%;
+  z-index: 10;
 }
 
 .c-faq__wrap__title::before {
