@@ -11,9 +11,9 @@
 }
 .p-hero__price {
   margin-top: 80px;
-  background-image: url(../image/plan.png);
-  background-position: center;
-  background-size: cover;
+  // background-image: url(../image/plan.png);
+  // background-position: center;
+  // background-size: cover;
   height: 221px;
   width: 100%;
 
@@ -21,15 +21,26 @@
   align-items: center;
   justify-content: center;
 }
-.p-hero__news {
-  @extend.p-hero__price;
-  background-image: url(../image/news.png);
-}
-.p-hero__form {
-  @extend.p-hero__price;
-  background-image: url(../image/price.png);
-}
-.p-hero__blog {
-  @extend.p-hero__price;
-  background-image: url(../image/blog.png);
+.p-hero__child {
+  position: relative;
+  margin-top: 80px;
+  img {
+    z-index: 10;
+    width: 100%;
+    object-fit: cover;
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    color: #fff;
+    font-family: "游ゴシック体";
+    font-weight: bold;
+  }
 }

@@ -2,11 +2,7 @@
 
 
 <main class="l-main__blog__archive">
-  <div class="p-hero__blog">
-    <h1 class="c-hero__blog__title c-hero__price__title c-title">
-      ブログ
-    </h1>
-  </div>
+ 
   <div class="l-main__blog__archive__wrap">
     <h1>
       新着一覧
@@ -16,13 +12,13 @@
       while (have_posts()) :
         the_post(); ?>
         <div class="p-main__blog__box">
-          <img class="c-main__image" src="./image/sample01.jpg"></img>
+          <img class="c-main__image" src="<?php echo get_template_directory_uri(); ?>/image/sample01.jpg"></img>
           <div class="p-main__blog__text">
             <time>
             <?php the_time('Y.m.d'); ?>
             </time>
             <h2>
-              <a href="<?php echo get_post_type_archive_link( 'blog' ); ?>">
+              <a href="<?php the_permalink(); ?>">
               <?php the_title(); ?>
               </a>
             </h2>
@@ -116,11 +112,11 @@
     <div class="p-footer__contact">
       <button class="c-footer__button">
         <a href="#">
-          <img src="./image/logo.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png">
         </a>
       </button>
       <div class="c-footer__number">
-        <img src="./image/logo3.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/image/logo3.png">
         <p>
           0123-456-7890
         </p>

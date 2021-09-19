@@ -7,8 +7,9 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    width: 90%;
+    margin-left: auto;
+   
+  
     @include breakpoint(tablet) {
       max-width: 900px;
     }

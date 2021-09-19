@@ -10,7 +10,7 @@
 
     </p>
     <button class="c-hero__button c-button">
-      <a href="./form.html">
+      <a href="<?php bloginfo("url");?>/contact">
 
         資料請求
       </a>
@@ -65,7 +65,7 @@
     </h1>
 
     <div class="p-service__box u-display">
-      <img src="./image/feature01.jpg"></img>
+      <img src="<?php echo get_template_directory_uri(); ?>/image/feature01.jpg"></img>
       <div class="p-service__box__wrap u-margin">
 
 
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div class="p-service__box ">
-      <img src="./image/feature01.jpg"></img>
+      <img src="<?php echo get_template_directory_uri(); ?>/image/feature01.jpg"></img>
       <div class="p-service__box__wrap">
 
 
@@ -107,7 +107,7 @@
       </div>
     </div>
     <div class="p-service__box u-display">
-      <img src="./image/feature03.jpg"></img>
+      <img src="<?php echo get_template_directory_uri(); ?>/image/feature03.jpg"></img>
       <div class="p-service__box__wrap u-margin">
 
 

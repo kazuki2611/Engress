@@ -2,17 +2,7 @@
 
 
   <main class="l-main__news">
-    <div class=" p-hero__single">
-      <div class="c-header__title3">
-        <h1>
-          h1 チーズバーガー
-        </h1>
-
-
-      </div>
-
-
-    </div>
+  
     <div class="p-service__wrap__single">
 
 
@@ -217,11 +207,11 @@
       <div class="p-footer__contact">
         <button class="c-footer__button">
           <a href="#">
-            <img src="./image/logo.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png">
           </a>
         </button>
         <div class="c-footer__number">
-          <img src="./image/logo3.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/image/logo3.png">
           <p>
             0123-456-7890
           </p>

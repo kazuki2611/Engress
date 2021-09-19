@@ -2,11 +2,7 @@
 
 
 <main class="l-main ">
-  <div class="p-hero__news">
-    <h1 class="c-hero__news__title c-hero__price__title c-title">
-      お知らせ
-    </h1>
-  </div>
+ 
   <div class="p-hero__archive">
     <div class="p-hero__archive__wrap">
       <h1 class="c-hero__archive__title">
@@ -29,7 +25,7 @@
             <?php the_time('Y.m.d'); ?>
             </time>
             <p class="c-hero__archive__box__title ">
-              <a href=" <?php echo get_post_type_archive_link('news'); ?>">
+              <a href=" <?php the_permalink(); ?>">
               <?php the_title(); ?>
 
               </a>
@@ -112,11 +108,11 @@
     <div class="p-footer__contact">
       <button class="c-footer__button">
         <a href="#">
-          <img src="./image/logo.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png">
         </a>
       </button>
       <div class="c-footer__number">
-        <img src="./image/logo3.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/image/logo3.png">
         <p>
           0123-456-7890
         </p>

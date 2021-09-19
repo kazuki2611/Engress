@@ -1,24 +1,7 @@
 
 .c-footer {
   &__menu {
-    &__item {
-      list-style: none;
-      padding-top: 10px;
-      @include breakpoint(tablet) {
-        padding-top: 0;
-        padding: 0 21.5px;
-        height: 23px;
-        border-right: solid 1px #fff;
-      }
-      a {
-        text-decoration: none;
-        color: $title-color;
-        font-weight: bold;
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-    }
+   
   }
   &__number {
     display: flex;
