@@ -10,7 +10,7 @@
 
     </p>
     <button class="c-hero__button c-button">
-      <a href="<?php bloginfo("url");?>/contact">
+      <a href="<?php bloginfo("url"); ?>/contact">
 
         資料請求
       </a>
@@ -152,12 +152,12 @@
             <div class="c-model__inner__work">
               <p>
 
-              <?php the_field('職業'); ?>
+                <?php the_field('職業'); ?>
               </p>
             </div>
             <div class="c-model__inner__name">
               <p>
-              <?php the_field('名前'); ?>
+                <?php the_field('名前'); ?>
 
               </p>
             </div>
@@ -165,7 +165,7 @@
           <p class="c-model__box__text">
 
 
-          <?php the_field('成果'); ?>
+            <?php the_field('成果'); ?>
 
           </p>
 

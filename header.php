@@ -92,7 +92,7 @@
       </nav> -->
       <?php
       $defaults = array(
-        // 'menu'            => 'グローバルメニュー',
+        'menu'            => 'グローバルメニュー',
         'menu_class'      => 'p-dropdown-menu__list p-dropdown-menu',
 
         'container'       => 'div',

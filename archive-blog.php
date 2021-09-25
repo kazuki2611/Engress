@@ -2,12 +2,13 @@
 
 
 <main class="l-main__blog__archive">
- 
+
   <div class="l-main__blog__archive__wrap">
     <h1>
       新着一覧
     </h1>
     <?php
+    
     if (have_posts()) :
       while (have_posts()) :
         the_post(); ?>
@@ -15,11 +16,20 @@
           <img class="c-main__image" src="<?php echo get_template_directory_uri(); ?>/image/sample01.jpg"></img>
           <div class="p-main__blog__text">
             <time>
-            <?php the_time('Y.m.d'); ?>
+              <?php the_time('Y.m.d'); ?>
             </time>
             <h2>
               <a href="<?php the_permalink(); ?>">
-              <?php the_title(); ?>
+                <!-- 20文字で制限し、それを超えた場合は「……」を付ける -->
+                <!--the_title -->
+                <?php
+                if (mb_strlen($post->post_title, 'UTF-8') > 20) {
+                  $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
+                  echo $title . '…';
+                } else {
+                  echo $post->post_title;
+                }
+                ?>
               </a>
             </h2>
             <p>
@@ -58,6 +68,7 @@
   <a class="c-page-button u-margin" title="Page 9" href="#">9</a>
   <a class="p-page__link" href="#">
 </div>
+<?php wp_pagenavi(); ?>
 <section class="p-contact">
   <h3 class="c-contact__title">
     まずは無料で資料請求から

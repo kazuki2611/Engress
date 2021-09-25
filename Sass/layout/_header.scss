@@ -6,7 +6,7 @@
   padding: 20px;
   height: 80px;
   background-color: $title-color;
-  
+  z-index: 100;
   @include breakpoint(pc) {
     padding: 0;
 
@@ -78,6 +78,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    
     @include breakpoint(pc) {
       // justify-content: space-between;
       // display: flex;

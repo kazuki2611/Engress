@@ -35,4 +35,48 @@ function remove_jquery_migrate_notice()
     $m->extra['before'][] = 'temp_jm_logconsole = window.console.log; window.console.log=null;';
     $m->extra['after'][] = 'window.console.log=temp_jm_logconsole;';
 }
+
+
 add_action('init', 'remove_jquery_migrate_notice', 5);
+function wpbeg_widgets_init()
+{
+    register_sidebar(
+        array(
+            'name'          => 'アーカイブウィジェット ',
+            'id'            => 'archive_widget',
+            'description'   => 'アーカイブ用ウィジェットです',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2><i class="fa fa-folder-open" aria-hidden="true"></i>',
+            'after_title'   => "</h2>\n",
+        )
+    );
+    register_sidebar(
+        array(
+            'name'          => 'カテゴリーウィジェット',
+            'id'            => 'category_widget',
+            'description'   => 'カテゴリー用ウィジェットです',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2><i class="fa fa-folder-open" aria-hidden="true"></i>',
+            'after_title'   => "</h2>\n",
+        )
+    );
+}
+add_action('widgets_init', 'wpbeg_widgets_init');
+
+function change_posts_per_page($query)
+{
+    if (is_admin() || !$query->is_main_query())
+        return;
+
+    /* アーカイブページの時に表示件数を10件にセット */
+    if ($query->is_archive('blog')) {
+        $query->set('posts_per_page', '10');
+    }
+    if ($query->is_archive('news')) {
+        $query->set('posts_per_page', '10');
+    }
+   
+}
+add_action('pre_get_posts', 'change_posts_per_page');

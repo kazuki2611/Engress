@@ -1,7 +1,9 @@
 <?php get_header(); ?>
+<div class="p-wrapper">
 
-<main class="l-main__news">
-  <!-- <div class=" p-hero__single">
+
+  <main class="l-main__news">
+    <!-- <div class=" p-hero__single">
     <div class="c-header__title3">
       <h1>
         ハンバーガー
@@ -13,29 +15,52 @@
 
 
   </div> -->
-  <?php
-  if (have_posts()) :
-    while (have_posts()) : the_post(); ?>
-      <div class="p-service__wrap__single">
+    <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post(); ?>
+        <div class="p-service__wrap__single">
 
 
-        <div class="p-service__archive p-service__single">
-          <h2 class="c-service__archive__title c-service__single__title">
-            <?php the_title(); ?>
-          </h2>
-          <?php the_content(); ?>
+          <div class="p-service__archive p-service__single">
+            <h2 class="c-service__archive__title c-service__single__title">
+              <?php the_title(); ?>
+            </h2>
+            <?php the_content(); ?>
 
 
 
 
+  </main>
+  <aside>
+  <?php endwhile;
+    else :
+  ?><p>表示する記事がありません</p><?php
+                      endif;
+                        ?>
 
-</main>
+<?php if (is_active_sidebar('archive_widget')) :
+  dynamic_sidebar('archive_widget');
+else :
+?>
+  <div class="widget">
+    <h2>No Widget</h2>
+    <p>ウィジットは設定されていません。</p>
+  </div>
+<?php endif; ?>
+<?php
+if (is_active_sidebar('category_widget')) :
+  dynamic_sidebar('category_widget');
+else :
+?>
+  <div class="widget">
+    <h2>No Widget</h2>
+    <p>ウィジットは設定されていません。</p>
+  </div>
+<?php endif; ?>
+  </aside>
+</div>
 
-<?php endwhile;
-  else :
-?><p>表示する記事がありません</p><?php
-                    endif;
-                      ?>
+
 
 <section class="p-contact">
   <h3 class="c-contact__title">

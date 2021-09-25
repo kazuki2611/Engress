@@ -24,6 +24,7 @@
 .p-hero__child {
   position: relative;
   margin-top: 80px;
+  z-index: 10;
   img {
     z-index: 10;
     width: 100%;
@@ -42,5 +43,6 @@
     color: #fff;
     font-family: "游ゴシック体";
     font-weight: bold;
+    z-index: 1;
   }
 }

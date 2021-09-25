@@ -2,7 +2,7 @@
 
 
 <main class="l-main ">
- 
+
   <div class="p-hero__archive">
     <div class="p-hero__archive__wrap">
       <h1 class="c-hero__archive__title">
@@ -22,11 +22,11 @@
           the_post(); ?>
           <div class="p-hero__archive__box u-border2">
             <time>
-            <?php the_time('Y.m.d'); ?>
+              <?php the_time('Y.m.d'); ?>
             </time>
             <p class="c-hero__archive__box__title ">
               <a href=" <?php the_permalink(); ?>">
-              <?php the_title(); ?>
+                <?php the_title(); ?>
 
               </a>
             </p>
@@ -50,9 +50,12 @@
       <a class="c-page-button" href="#">8</a>
       <a class="c-page-button u-margin" title="Page 9" href="#">9</a>
       <a class="p-page__link" href="#">
+      
     </div>
 
+
 </main>
+<?php wp_pagenavi(); ?>
 <section class="p-contact">
   <h3 class="c-contact__title">
     まずは無料で資料請求から
