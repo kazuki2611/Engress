@@ -2,7 +2,7 @@
   display: flex;
 }
 .p-faq__wrap {
-  text-align: center;
+  text-align: left;
   width: 100%;
   font-size: 14px;
   margin-top: 50px;
@@ -14,7 +14,7 @@
   &__list {
     border-top: 1px solid #1b224c;
     // display: flex;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 }

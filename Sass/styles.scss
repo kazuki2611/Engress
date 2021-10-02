@@ -113,24 +113,42 @@
   }
   &__box {
     border-top: solid 1px #d5d5d5;
-
     height: 64px;
-    align-items: center;
-    display: block;
+    // align-items: center;
+    display: flex;
     padding-top: 10px;
+  align-items: center;
+  
     @include breakpoint(tablet) {
       display: flex;
       padding-top: 0;
     }
     time {
-      width: 20%;
-
+      
+      padding-right: 10px;
       align-items: center;
-      display: flex;
+      
+      font-family: "游ゴシック体";
+      font-weight: 500;
+      font-size: 14px;
+      @include breakpoint(tablet) {
+        font-size: 16px;
+        margin-right: 50px;
+      }
+    }
+    p {
+     
+      text-align: left;
     }
     a {
       color: #1b224c;
       font-weight: 500;
+     font-size: 0.75rem;
+     
+      line-height: 1.5;
+      @include breakpoint(tablet) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -141,10 +159,7 @@
   font-weight: bold;
   margin-bottom: 50px;
 }
-.c-hero__archive__box__title {
-  font-weight: 500;
-  font-family: "游ゴシック体";
-}
+
 .u-border2 {
   border-bottom: solid 1px #d5d5d5;
 }
@@ -170,46 +185,25 @@
     margin-top: 150px;
   }
 }
-.l-main__news {
-  width: 80%;
 
-  margin: 0 auto;
-  margin-top: 80px;
-  @include breakpoint(tablet) {
-    max-width: 900px;
-  }
-}
-.l-main__blog__archive__wrap {
-  width: 80%;
-  margin-top: 80px;
-  margin: 0 auto;
-  font-family: "游ゴシック体";
-  margin-top: 40px;
-  @include breakpoint(tablet) {
-    max-width: 900px;
-  }
-  h1 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: #1b224c;
-  }
-}
 .p-main__blog__box {
   width: 80%;
   margin: 0 auto;
   margin-top: 30px;
+  position: relative;
   @include breakpoint(tablet) {
     display: flex;
-
+    margin-top: 90px;
     height: 150px;
+    width: 100%;
   }
   img {
     margin: 0 auto;
     object-fit: cover;
-    width: 100%;
+    width: 240px;
+    height: 178px;
+
     @include breakpoint(tablet) {
-      width: 30%;
     }
   }
 }
@@ -220,17 +214,32 @@
   }
 }
 .breadcrumb-area {
-  width: 80%;
-  margin: 0 auto;
-  @include breakpoint(tablet) {
-    max-width: 900px;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  color: $base-color;
+  height: 50px;
+  width: 100%;
+  background-color: #f8f8f8;
+  align-items: center;
+  display: flex;
+  &__inner {
+    margin: 0 auto;
+
+    width: 80%;
+    @include breakpoint(tablet) {
+      max-width: 900px;
+    }
   }
+
   a {
     text-decoration-color: #000;
   }
   span {
     color: #000;
     text-decoration: none;
+    font-size: 12px;
+    font-family: "游ゴシック体";
+    font-weight: 500;
   }
 }
 .l-footer__inner {
@@ -248,10 +257,10 @@
   margin-top: 40px;
   font-family: "游ゴシック体";
   font-weight: 500;
-  span {
-    margin-top: 35px;
-    margin-bottom: 40px;
-  }
+  // span {
+  //   margin-top: 35px;
+  //   margin-bottom: 40px;
+  // }
   p {
     span {
       font-weight: 500;
@@ -299,6 +308,10 @@
   h1 {
     text-align: center;
     font-weight: bold;
+    font-size: 28px;
+    @include breakpoint(pc) {
+      font-size: 32px;
+    }
   }
   &__inner {
     width: 90%;
@@ -318,7 +331,7 @@
     overflow: auto; /*スクロールさせる*/
     white-space: nowrap; /*文字の折り返しを禁止*/
 
-    @include breakpoint(tablet) {
+    @include breakpoint(pc) {
       overflow: visible;
     }
     &::-webkit-scrollbar {
@@ -341,9 +354,12 @@
         background-color: #1b224c;
         color: #fff;
         height: 60px;
+        width: 220px;
         align-items: center;
         display: flex;
         justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
       }
       p {
         span {
@@ -358,6 +374,9 @@
     }
     ul {
       margin-top: 50px;
+      @include breakpoint(pc) {
+        margin-top: 0;
+      }
     }
     li {
       list-style: none;
@@ -439,8 +458,8 @@
   }
 }
 .c-price__title {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 55px;
 }
 .c-price__title2 {
   margin-top: 90px;
@@ -448,8 +467,12 @@
 .wp-pagenavi {
   /* 全体 */
   margin: 20px 0;
-  font-size: 12px;
+  font-size: 1６６px;
   text-align: center;
+  font-family: "游ゴシック体";
+  @include breakpoint(tablet) {
+    margin-top: 65px;
+  }
 }
 .wp-pagenavi a {
   /* フォント色 */
@@ -466,8 +489,8 @@
   margin: 0 6px 6px 0;
   display: inline-block;
   border: solid 1px #eee;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 
   line-height: 40px;
   text-align: center;
@@ -492,6 +515,15 @@
 .wp-pagenavi .nextpostslink {
   /* 記号の削除 */
   display: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.pages {
+  text-decoration: underline;
 }
 blockquote {
   position: relative;
@@ -528,37 +560,104 @@ blockquote cite {
   font-size: 0.9em;
 }
 aside {
-  margin-top: 90px;
-  width: 20%;
   font-family: "游ゴシック体";
+  margin-top: 90px;
+  @include breakpoint(tablet) {
+    // margin: 90px auto 0 auto;
+    width: 40%;
+  }
   h2 {
     font-weight: bold;
     font-size: 21px;
     color: #fff;
     background-color: #1b224c;
-    width: 270px;
+    width: 100%;
     height: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+    @include breakpoint(pc) {
+      width: 270px;
+    }
   }
 }
 .widget {
-  margin-top: 27px;
+  width: 90%;
+  margin-bottom: 27px;
+
+  margin: 27px auto 0 auto;
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+  a {
+    color: $base-color;
+    font-family: "游ゴシック体";
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+  }
 }
-.eyecatch-cus {
-  position: relative; /*位置*/
+aside li {
+  list-style: none;
 }
-p.eyecatch-labelinfo {
-  position: absolute; /*位置*/
-  font-size: 8px; /*文字サイズ*/
-  font-weight: bold; /*文字を太字*/
-  color: #ffff00; /*文字の色*/
-  background-color: #adff2f; /*背景色*/
-  padding: 0px 4px; /*縦・横の幅*/
-  left: 0; /*左からの位置*/
-  top: 0; /*上からの位置*/
-  opacity: 1; /*透明度*/
-  z-index: 5000; /*重なりの順序*/
+// .eyecatch-cus {
+//   position: relative; /*位置*/
+// }
+// p.eyecatch-labelinfo {
+//   position: absolute; /*位置*/
+//   font-size: 8px; /*文字サイズ*/
+//   font-weight: bold; /*文字を太字*/
+//   color: #ffff00; /*文字の色*/
+//   background-color: #adff2f; /*背景色*/
+//   padding: 0px 4px; /*縦・横の幅*/
+//   left: 0; /*左からの位置*/
+//   top: 0; /*上からの位置*/
+//   opacity: 1; /*透明度*/
+//   z-index: 5000; /*重なりの順序*/
+// }
+
+// .attachment-full {
+
+// }
+.eyecatch-label {
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  font-size: 12px;
+  background-color: $base-color;
+  color: $title-color;
+  width: 78px;
+  height: 23px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.rpwe-block {
+  h3 {
+    font-size: 12px;
+    margin-left: 20px;
+    text-decoration: underline;
+    font-family: "游ゴシック体";
+    font-weight: 500;
+
+    a {
+      color: $base-color;
+    }
+  }
+}
+.rpwe-li {
+  display: flex;
+  margin-bottom: 30px;
 }

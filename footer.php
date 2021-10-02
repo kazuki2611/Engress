@@ -5,7 +5,7 @@
    <?php
       $defaults = array(
         'menu'            => 'フッターナビゲーション',
-        'menu_class'      => 'p-footer__menu ',
+        'menu_class'      => 'p-footer__menu__list ',
 
         'container'       => 'div',
         'container_class' => 'p-footer__menu',

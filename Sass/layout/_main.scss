@@ -1,6 +1,32 @@
 .l-main {
   height: 100%;
   &__news {
-    font-family: "游ゴシック体";
+  
+  }
+}
+.l-main__news {
+  width: 90%;
+  font-family: "游ゴシック体";
+  margin: 0 auto;
+  margin-top: 80px;
+  @include breakpoint(tablet) {
+    max-width: 900px;
+  }
+}
+.l-main__blog__archive__wrap {
+  width: 80%;
+  
+  margin: 40px auto 0 auto;
+  font-family: "游ゴシック体";
+ 
+  @include breakpoint(tablet) {
+    max-width: 900px;
+  padding-bottom: 40px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1b224c;
   }
 }

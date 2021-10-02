@@ -32,6 +32,20 @@
         color: $base-color;
       }
       }
+      &__single {
+        @extend.c-blog__wrap__text;
+        text-decoration: underline;
+       
+        time {
+          position: static;
+        }
+        p {
+         @include breakpoint (tablet) {
+           margin-top: 20px;
+         }
+        }
+
+      }
     }
     &__image {
       object-fit: cover;

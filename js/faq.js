@@ -4,7 +4,7 @@ $(function () {
   $(".c-faq__wrap__title").click(function () {
 
 
-
+    
 
    
         //クリックしたjs-accordion-title以外の全てのopenを取る

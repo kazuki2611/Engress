@@ -9,11 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engress</title>
   </title>
-  
+
   <link rel="stylesheet" href="/Sass/styles.scss">
   <meta name="robots" content="noindex">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 
+
 
   <link rel="icon" href="http://mysite.local/wp-content/themes/Engress/image/logo02.png">
 
@@ -93,7 +93,7 @@
       <?php
       $defaults = array(
         'menu'            => 'グローバルメニュー',
-        'menu_class'      => 'p-dropdown-menu__list p-dropdown-menu',
+        'menu_class'      => 'p-dropdown-menu__list',
 
         'container'       => 'div',
         'container_class' => 'p-dropdown-menu',
@@ -125,7 +125,7 @@
             </p>
           </div>
         </div>
-        <div class="l-header__right__wrap">
+        <div class="l-header__right__wrapper">
           <button class="c-header__right__button c-button">
             <a href="<?php echo home_url(); ?>/contact">
 
@@ -170,28 +170,33 @@
       </h1>
       <img src="<?php bloginfo("template_url"); ?>/image/price.png">
     </div>
-    
-  <?php } else if (is_page("contact")){ ?>
+
+  <?php } else if (is_page("contact")) { ?>
 
     <div class="p-hero__child">
       <h1>
-      お問い合わせ・資料請求
+        お問い合わせ・資料請求
       </h1>
       <img src="<?php bloginfo("template_url"); ?>/image/price.png">
     </div>
-    
+
   <?php } else {
   } ?>
 
   <!-- トップページ以外でパンくずを表示する -->
 
   <?php if (!(is_home() || is_front_page())) : ?>
+    
     <div class="breadcrumb-area">
-      <?php
-      if (function_exists('bcn_display')) {
-        bcn_display();
-      }
-      ?>
+      <div class="breadcrumb-area__inner">
+
+
+        <?php
+        if (function_exists('bcn_display')) {
+          bcn_display();
+        }
+        ?>
+      </div>
     </div>
   <?php endif; ?>
   <!-- <div class="p-hero__blog">

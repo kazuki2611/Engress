@@ -5,9 +5,10 @@
     text-align: center;
     color: $base-color;
     margin-top: 60px;
-    
+    margin-bottom: 30px;
     @include breakpoint(tablet) {
       margin-top: 70px;
+      font-size: 36px;
     }
   }
   &__wrap {
@@ -20,18 +21,20 @@
       cursor: pointer;
       display: block;
       align-items: center;
-      justify-content: center;
+     
       display: flex;
       position: relative;
       font-size: 14px;
       line-height: 1.85;
       width: 100%;
       z-index: 10;
+      text-align: left;
+     
       &::before {
         content: "";
         position: absolute;
         top: 50%;
-        right: 25px;
+        right: 15px;
         width: 15px;
         height: 2px;
         /*縦線に*/
@@ -43,7 +46,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        right: 25px;
+        right: 15px;
         /*横線*/
         width: 15px;
         height: 2px;

@@ -305,24 +305,7 @@
 
 
     </div>
-    <div class="p-flow__wrap">
-      <div class="c-flow__number">
-        01
-      </div>
-      <div class="c-flow__title2">
-        <h4>
-          お問い合わせ
-        </h4>
-      </div>
-      <div class="c-flow__border"></div>
-      <div class="c-flow__text">
-        <p>
-          まずはフォームまたはお電話からお申し込みください。
-        </p>
-      </div>
-
-
-    </div>
+    
 
   </section>
   <section>
@@ -332,7 +315,7 @@
       </h1>
       <div class="p-faq__wrap">
         <dl class="p-faq__wrap__list">
-          <dt class="c-faq__wrap__title">
+          <dt class="c-faq__wrap__title active">
             Engressはサラリーマンでも学習を続けられるでしょうか？
             <!-- <div class="section">
   
@@ -345,7 +328,7 @@
               <i class="op_plus"></i>
 
             </div> -->
-          <dd class="c-faq__text u-display">
+          <dd class="c-faq__text " style="display:block;">
             Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
           </dd>
         </dl>
@@ -422,6 +405,14 @@
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <div class="p-blog__wrap">
             <?php the_post_thumbnail('full'); ?>
+            <p class="eyecatch-label">
+              <!-- カテゴリー名を表示する（リンクなし,一つだけ）-->
+              <?php
+              $terms = get_the_terms($post->ID, 'blog__cate');
+              echo esc_html($terms[0]->name);
+              ?>
+
+            </p>
             <div class="c-blog__wrap__text">
               <p>
                 <a href="<?php the_permalink(); ?>">
@@ -484,29 +475,8 @@
 
   </div>
   </section>
-  <section class="p-contact">
-    <h3 class="c-contact__title">
-      まずは無料で資料請求から
-    </h3>
-    <button class="c-service__plan__button c-button">
-      料金を見てみる
-    </button>
+  <?php get_template_part('contact'); ?>
 
-    <a href="./form.html">
-      お問い合わせ
-    </a>
-  </section>
-  <section class="p-number">
-    <div class="p-contact__number">
-      <p>お電話でのお問い合わせはこちら</p>
-      <span>
-
-        <p>0123-456-7890</p>
-      </span>
-      <p class="u-font">平日 08:00~20:00</p>
-    </div>
-
-  </section>
 
 
 

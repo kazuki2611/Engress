@@ -1,4 +1,11 @@
 .c-service {
+  &__single {
+    &__title {
+      color: $base-color;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
   &__title {
     font-size: 4.5vw;
     font-weight: bold;

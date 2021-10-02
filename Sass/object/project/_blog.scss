@@ -4,8 +4,18 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 20px;
-    @include breakpoint(tablet) {
-      width: 100%;
+    position: relative;
+    @include breakpoint (tablet) {
+      width: auto;
     }
+    img {
+     
+      object-fit: cover;
+      @include breakpoint (tablet) {
+        width: 210px;
+        height: 128px;
+      }
+    }
+    
   }
 }

@@ -4,4 +4,9 @@
     display: flex;
     margin-left: 0;
   }
+  &__faq {
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
 }

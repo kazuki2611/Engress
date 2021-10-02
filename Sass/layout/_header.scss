@@ -1,5 +1,5 @@
 .l-header {
-  position: fixed;
+  // position: fixed;
   font-family: "游ゴシック体";
   width: 100%;
   // height: 1000px;
@@ -11,7 +11,7 @@
     padding: 0;
 
     height: 80px;
-  
+
     align-items: center;
     display: flex;
   }
@@ -26,9 +26,11 @@
     padding-left: 20px;
     background-color: #fff;
     padding-bottom: 3000px;
-
+    height: 80px;
     @include breakpoint(pc) {
-      padding-bottom: 30px;
+      padding: 0;
+      padding-bottom: 0;
+      // padding-bottom: 30px;
       width: auto;
       display: flex;
       margin-left: auto;
@@ -39,7 +41,12 @@
     &__wrap {
       @include breakpoint(pc) {
         text-align: right;
-        margin-right: 20px;
+        margin-right: 23px;
+      }
+    }
+    &__wrapper {
+      @include breakpoint (pc) {
+        margin-left: 10px;
       }
     }
   }
@@ -51,17 +58,19 @@
   }
   &__wrap {
     width: 80%;
-    position: absolute;
-    transition: 0.6s;
-    right: -1000px;
+    position: fixed;
+    transition: 0.5s;
+    right: -80%;
     top: 0%;
 
     z-index: 100;
     background-color: $title-color;
-    padding-top: 60px;
+    padding-top: 120px;
     margin-left: 20px;
+
     @include breakpoint(tablet) {
       width: 40%;
+      right: -40%;
     }
     @include breakpoint(pc) {
       padding-top: 0;
@@ -69,6 +78,8 @@
       position: static;
       display: flex;
       width: 100%;
+      margin-left: 12px;
+      padding-right: 20px;
     }
     &.is-open {
       right: 0;
@@ -78,7 +89,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    
+
     @include breakpoint(pc) {
       // justify-content: space-between;
       // display: flex;
