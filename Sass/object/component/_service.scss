@@ -19,6 +19,8 @@
   &__box {
     &__point {
       p {
+        font-family: "游ゴシック体";
+        font-weight: 500;
         padding-top: 7px;
         padding-bottom: 10px;
         font-size: 12px;
@@ -72,6 +74,7 @@
       line-height: 1.6;
       margin-top: 25px;
       color: $title-color;
+      font-weight: bold;
       border: solid 1px $title-color;
       border-radius: 31px;
       width: 200px;

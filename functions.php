@@ -12,7 +12,7 @@ function hoge_setup()
     ));
 
     add_theme_support('customize-selective-refresh-widgets');
-    add_theme_support( "custom-header", $args );
+    add_theme_support( "custom-header", );
     register_nav_menus(array(
         'global' => 'グローバルナビ',
     ));

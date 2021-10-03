@@ -5,7 +5,9 @@
     width: 90%;
     justify-content: flex-end;
     height: 36px;
-
+p {
+  font-weight: bold;
+}
     @include breakpoint(tablet) {
       max-width: 900px;
       margin: 0 auto;

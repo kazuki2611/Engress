@@ -26,6 +26,7 @@
             <!-- カテゴリー名を表示する（リンクなし）-->
 
             <?php $terms = get_the_terms($post->ID, 'blog__cate');
+            
             foreach ($terms as $term) {
               $term_name = $term->name;
               echo esc_html($term_name);
@@ -86,7 +87,7 @@
   <a class="p-page__link" href="#">
 </div> -->
   <?php wp_pagenavi(); ?>
-  <?php wp_link_pages( $args ); ?>
+ 
 </main>
 <?php get_template_part('contact'); ?>
 
