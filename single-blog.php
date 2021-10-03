@@ -90,9 +90,9 @@
                     // タイトル文字制限
                     if (mb_strlen($post->post_title) > 20) {
                       $title = mb_substr($post->post_title, 0, 20);
-                      echo $title . '...';
+                      echo esc_html( $title . '...');
                     } else {
-                      echo $post->post_title;
+                      echo esc_html($post->post_title);
                     }
                     ?>
                   </a>

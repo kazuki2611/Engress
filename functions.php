@@ -12,10 +12,12 @@ function hoge_setup()
     ));
 
     add_theme_support('customize-selective-refresh-widgets');
-
+    add_theme_support( "custom-header", $args );
     register_nav_menus(array(
         'global' => 'グローバルナビ',
     ));
+    add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'title-tag' );
 }
 add_action('after_setup_theme', 'hoge_setup');
 

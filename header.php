@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 
 <head>
   <meta charset="UTF-8">
@@ -24,8 +24,8 @@
 
 </head>
 
-<body>
-
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
   <header class="l-header">
 
 
@@ -38,7 +38,8 @@
     <div class="l-header__inner">
 
       <div class="l-header__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/image/logo.png'); ?>">
+
       </div>
       <button class="p-hamburger  is-hamburger ">
         <span></span>
@@ -119,7 +120,8 @@
             </p>
           </div>
           <div class="c-header__right__number">
-            <img src="<?php echo get_template_directory_uri(); ?>/image/logo3.png">
+           
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/image/logo3.png'); ?>">
             <p>
               0123-456-7890
             </p>
@@ -127,13 +129,13 @@
         </div>
         <div class="l-header__right__wrapper">
           <button class="c-header__right__button c-button">
-            <a href="<?php echo home_url(); ?>/contact">
+            <a href="<?php echo esc_url(home_url()); ?>/contact">
 
               資料請求
             </a>
           </button>
           <button class="c-header__right__button__blue c-button">
-            <a href="<?php echo home_url(); ?>/contact">
+            <a href="<?php echo esc_url(home_url()); ?>/contact">
               お問い合わせ
 
             </a>
@@ -186,7 +188,7 @@
   <!-- トップページ以外でパンくずを表示する -->
 
   <?php if (!(is_home() || is_front_page())) : ?>
-    
+
     <div class="breadcrumb-area">
       <div class="breadcrumb-area__inner">
 

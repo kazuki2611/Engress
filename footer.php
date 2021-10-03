@@ -48,11 +48,12 @@
     <div class="p-footer__contact">
       <button class="c-footer__button">
         <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/image/logo.png">
+          <img src="<?php echo esc_url (get_template_directory_uri(). '/image/logo.png'); ?>" >
+         
         </a>
       </button>
       <div class="c-footer__number">
-        <img src="<?php echo get_template_directory_uri(); ?>/image/logo3.png">
+        <img src="<?php echo esc_url (get_template_directory_uri(). '/image/logo3.png'); ?>" >
         <p>
           0123-456-7890
         </p>

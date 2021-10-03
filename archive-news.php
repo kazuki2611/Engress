@@ -31,9 +31,9 @@
                 <?php
                 if (mb_strlen($post->post_title, 'UTF-8') > 40) {
                   $title = mb_substr($post->post_title, 0, 40, 'UTF-8');
-                  echo $title . '…';
+                  echo esc_html($title . '…');
                 } else {
-                  echo $post->post_title;
+                  echo esc_html($post->post_title);
                 }
                 ?>
 

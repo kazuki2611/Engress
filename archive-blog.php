@@ -20,7 +20,7 @@
           else :
           ?>
             <!-- ない場合 -->
-            <img src="<?php echo get_template_directory_uri(); ?>/image/noimage.png" alt="" />
+            <img src="<?php echo esc_url (get_template_directory_uri() .'/image/noimage.png'); ?> "alt="" />
           <?php endif; ?>
           <p class="eyecatch-label">
             <!-- カテゴリー名を表示する（リンクなし）-->
@@ -28,7 +28,7 @@
             <?php $terms = get_the_terms($post->ID, 'blog__cate');
             foreach ($terms as $term) {
               $term_name = $term->name;
-              echo $term_name;
+              echo esc_html($term_name);
               break;
             }; ?>
           </p>
@@ -43,9 +43,9 @@
                 <?php
                 if (mb_strlen($post->post_title, 'UTF-8') > 20) {
                   $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
-                  echo $title . '…';
+                  echo esc_html($title . '…');
                 } else {
-                  echo $post->post_title;
+                  echo esc_html($post->post_title);
                 }
                 ?>
               </a>
@@ -86,7 +86,7 @@
   <a class="p-page__link" href="#">
 </div> -->
   <?php wp_pagenavi(); ?>
- 
+  <?php wp_link_pages( $args ); ?>
 </main>
 <?php get_template_part('contact'); ?>
 

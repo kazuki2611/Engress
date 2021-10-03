@@ -65,7 +65,8 @@
     </h1>
 
     <div class="p-service__box u-display">
-      <img src="<?php echo get_template_directory_uri(); ?>/image/feature01.jpg"></img>
+     
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/image/feature01.jpg'); ?>">
       <div class="p-service__box__wrap u-margin">
 
 
@@ -86,7 +87,8 @@
       </div>
     </div>
     <div class="p-service__box ">
-      <img src="<?php echo get_template_directory_uri(); ?>/image/feature01.jpg"></img>
+     
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/image/feature01.jpg'); ?>">
       <div class="p-service__box__wrap">
 
 
@@ -107,7 +109,8 @@
       </div>
     </div>
     <div class="p-service__box u-display">
-      <img src="<?php echo get_template_directory_uri(); ?>/image/feature03.jpg"></img>
+      
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/image/feature03.jpg'); ?>">
       <div class="p-service__box__wrap u-margin">
 
 
@@ -139,8 +142,9 @@
     <h1 class="c-model__title c-title">
       TOEFL成功事例
     </h1>
-    <div class="p-model__wrap">
-      <?php while (have_posts()) : ?>
+    <div <?php post_class("p-model__wrap");?>>
+    <?php while (have_posts()) : ?>
+      
         <div class="p-model__box">
           <p class="c-model__box__title c-title">
 
