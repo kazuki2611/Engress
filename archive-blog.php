@@ -71,20 +71,7 @@
 
   </div>
 
-  <!-- <div class="p-page">
-
-
-  <a class="c-page-button" href="#">1</a>
-  <a class="c-page-button" href="#">2</a>
-  <a class="c-page-button" href="#">3</a>
-  <a class="c-page-button" href="#">4</a>
-  <a class="c-page-button" href="#">5</a>
-  <a class="c-page-button" href="#">6</a>
-  <a class="c-page-button" href="#">7</a>
-  <a class="c-page-button" href="#">8</a>
-  <a class="c-page-button u-margin" title="Page 9" href="#">9</a>
-  <a class="p-page__link" href="#">
-</div> -->
+  
   <?php wp_pagenavi(); ?>
  
 </main>

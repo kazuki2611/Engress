@@ -1,0 +1,62 @@
+.c-price {
+
+  &__text {
+    margin-top: 45px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &__item {
+    background-color: #1b224c;
+    width: 43%;
+    height: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      width: 280px;
+      height: 90px;
+      font-size: 22px;
+    }
+  
+    &__plus {
+      width: 50px;
+      height: 50px;
+      position: relative;
+  
+      &::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+  
+        display: block;
+        transition: transform 0.2s;
+        top: 25px;
+        left: 12.5px;
+      }
+      &::before {
+        content: "";
+        width: 2px;
+        height: 30px;
+        background-color: #000;
+        position: absolute;
+  
+        display: block;
+        transition: transform 0.2s;
+        left: 26px;
+        top: 12.5px;
+      }
+    }
+  }
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 55px;
+  }
+  &__title2 {
+    margin-top: 90px;
+  }
+}

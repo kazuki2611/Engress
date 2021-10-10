@@ -1,0 +1,30 @@
+.p-aside {
+  font-family: "游ゴシック体";
+  margin-top: 90px;
+  @include breakpoint(tablet) {
+    // margin: 90px auto 0 auto;
+    width: 40%;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 21px;
+    color: #fff;
+    background-color: #1b224c;
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+    @include breakpoint(pc) {
+      width: 270px;
+    }
+  }
+}
+.p-aside li {
+  list-style: none;
+}

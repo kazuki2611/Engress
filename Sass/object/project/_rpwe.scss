@@ -1,0 +1,17 @@
+.rpwe-block {
+  h3 {
+    font-size: 12px;
+    margin-left: 20px;
+    text-decoration: underline;
+    font-family: "游ゴシック体";
+    font-weight: 500;
+
+    a {
+      color: $base-color;
+    }
+  }
+}
+.rpwe-li {
+  display: flex;
+  margin-bottom: 30px;
+}

@@ -16,4 +16,15 @@
       max-width: 900px;
     }
   }
+  &__inner {
+   
+      display: flex;
+      width: 80%;
+    
+      margin: 0 auto;
+      @include breakpoint(tablet) {
+        max-width: 900px;
+      
+    }
+  }
 }

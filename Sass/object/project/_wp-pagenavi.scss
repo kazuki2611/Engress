@@ -1,0 +1,65 @@
+.wp-pagenavi {
+  /* 全体 */
+  margin: 20px 0;
+
+  text-align: center;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  @include breakpoint(tablet) {
+    margin-top: 65px;
+  }
+}
+.wp-pagenavi a {
+  /* フォント色 */
+  color: #4a4a4a;
+  align-items: center;
+}
+.pages {
+  /* 左の表記 */
+  // margin-right: 20px;
+  display: none;
+}
+.wp-pagenavi .current,
+.wp-pagenavi a.page {
+  /* ボタン */
+  margin: 0 6px;
+  display: inline-block;
+  border: solid 1px #eee;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+
+  line-height: 45px;
+  text-align: center;
+}
+.wp-pagenavi .current {
+  /* カレント数字 */
+  border: none;
+  background: #1b224c;
+  color: #fff;
+  align-items: center;
+}
+.wp-pagenavi a.page:hover {
+  /* マウスオーバー */
+  background: #1b224c;
+  color: #fff;
+}
+.wp-pagenavi .first,
+.wp-pagenavi .extend {
+  /* ... */
+  margin-right: 10px;
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  /* 記号の削除 */
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.pages {
+  text-decoration: underline;
+}

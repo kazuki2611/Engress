@@ -760,6 +760,68 @@ html.is-open {
   }
 }
 
+.p-hero__archive {
+  margin-top: 50px;
+}
+
+.p-hero__archive__wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .p-hero__archive__wrap {
+    max-width: 900px;
+  }
+}
+
+.p-hero__archive__box {
+  border-top: solid 1px #d5d5d5;
+  display: flex;
+  padding-top: 10px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .p-hero__archive__box {
+    height: 64px;
+    display: flex;
+    padding-top: 0;
+  }
+}
+
+.p-hero__archive__box time {
+  padding-right: 10px;
+  align-items: center;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .p-hero__archive__box time {
+    font-size: 16px;
+    margin-right: 50px;
+  }
+}
+
+.p-hero__archive__box p {
+  text-align: left;
+}
+
+.p-hero__archive__box a {
+  color: #1b224c;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .p-hero__archive__box a {
+    font-size: 16px;
+  }
+}
+
 .p-hero__price {
   margin-top: 80px;
   height: 221px;
@@ -857,6 +919,13 @@ html.is-open {
   font-family: "游ゴシック体";
   font-weight: bold;
   color: #fff;
+}
+
+.c-hero__archive__title {
+  text-align: center;
+  font-family: "游ゴシック体";
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .p-concept {
@@ -1527,6 +1596,10 @@ html.is-open {
   border-bottom: 1px solid #1b224c;
 }
 
+.u-border2 {
+  border-bottom: solid 1px #d5d5d5;
+}
+
 .p-wrapper {
   width: 80%;
   margin: 0 auto;
@@ -1807,6 +1880,18 @@ html.is-open {
   }
 }
 
+.l-footer__inner {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .l-footer__inner {
+    max-width: 900px;
+  }
+}
+
 .p-footer__menu {
   margin-top: 30px;
 }
@@ -1939,79 +2024,6 @@ html.is-open {
   }
 }
 
-.p-hero__archive {
-  margin-top: 50px;
-}
-
-.p-hero__archive__wrap {
-  width: 80%;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .p-hero__archive__wrap {
-    max-width: 900px;
-  }
-}
-
-.p-hero__archive__box {
-  border-top: solid 1px #d5d5d5;
-  display: flex;
-  padding-top: 10px;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .p-hero__archive__box {
-    height: 64px;
-    display: flex;
-    padding-top: 0;
-  }
-}
-
-.p-hero__archive__box time {
-  padding-right: 10px;
-  align-items: center;
-  font-family: "游ゴシック体";
-  font-weight: 500;
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  .p-hero__archive__box time {
-    font-size: 16px;
-    margin-right: 50px;
-  }
-}
-
-.p-hero__archive__box p {
-  text-align: left;
-}
-
-.p-hero__archive__box a {
-  color: #1b224c;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  .p-hero__archive__box a {
-    font-size: 16px;
-  }
-}
-
-.c-hero__archive__title {
-  text-align: center;
-  font-family: "游ゴシック体";
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-.u-border2 {
-  border-bottom: solid 1px #d5d5d5;
-}
-
 .p-page {
   height: 170.5px;
   display: flex;
@@ -2072,52 +2084,6 @@ html.is-open {
 
 .p-main__blog__text a {
   color: #1b224c;
-}
-
-.breadcrumb-area {
-  font-family: "游ゴシック体";
-  font-weight: 500;
-  color: #1B224C;
-  height: 50px;
-  width: 100%;
-  background-color: #f8f8f8;
-  align-items: center;
-  display: flex;
-}
-
-.breadcrumb-area__inner {
-  margin: 0 auto;
-  width: 80%;
-}
-
-@media (min-width: 768px) {
-  .breadcrumb-area__inner {
-    max-width: 900px;
-  }
-}
-
-.breadcrumb-area a {
-  text-decoration-color: #000;
-}
-
-.breadcrumb-area span {
-  color: #000;
-  text-decoration: none;
-  font-size: 12px;
-  font-family: "游ゴシック体";
-  font-weight: 500;
-}
-
-.l-footer__inner {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .l-footer__inner {
-    max-width: 900px;
-  }
 }
 
 .p-form {
@@ -2305,7 +2271,7 @@ html.is-open {
   font-weight: 500;
 }
 
-.c-price___item {
+.c-price__item {
   background-color: #1b224c;
   width: 43%;
   height: 50px;
@@ -2318,20 +2284,20 @@ html.is-open {
 }
 
 @media (min-width: 768px) {
-  .c-price___item {
+  .c-price__item {
     width: 280px;
     height: 90px;
     font-size: 22px;
   }
 }
 
-.c-price___item__plus {
+.c-price__item__plus {
   width: 50px;
   height: 50px;
   position: relative;
 }
 
-.c-price___item__plus::after {
+.c-price__item__plus::after {
   content: "";
   width: 30px;
   height: 2px;
@@ -2343,7 +2309,7 @@ html.is-open {
   left: 12.5px;
 }
 
-.c-price___item__plus::before {
+.c-price__item__plus::before {
   content: "";
   width: 2px;
   height: 30px;
@@ -2353,6 +2319,15 @@ html.is-open {
   transition: transform 0.2s;
   left: 26px;
   top: 12.5px;
+}
+
+.c-price__title {
+  margin-top: 50px;
+  margin-bottom: 55px;
+}
+
+.c-price__title2 {
+  margin-top: 90px;
 }
 
 .u-price {
@@ -2365,13 +2340,79 @@ html.is-open {
   height: 96px;
 }
 
-.c-price__title {
-  margin-top: 50px;
-  margin-bottom: 55px;
+.p-aside {
+  font-family: "游ゴシック体";
+  margin-top: 90px;
 }
 
-.c-price__title2 {
-  margin-top: 90px;
+@media (min-width: 768px) {
+  .p-aside {
+    width: 40%;
+  }
+}
+
+.p-aside h2 {
+  font-weight: bold;
+  font-size: 21px;
+  color: #fff;
+  background-color: #1b224c;
+  width: 100%;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
+}
+
+@media (min-width: 768px) {
+  .p-aside h2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .p-aside h2 {
+    width: 270px;
+  }
+}
+
+.p-aside li {
+  list-style: none;
+}
+
+.breadcrumb-area {
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  color: #1B224C;
+  height: 50px;
+  width: 100%;
+  background-color: #f8f8f8;
+  align-items: center;
+  display: flex;
+}
+
+.breadcrumb-area__inner {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .breadcrumb-area__inner {
+    max-width: 900px;
+  }
+}
+
+.breadcrumb-area a {
+  text-decoration-color: #000;
+}
+
+.breadcrumb-area span {
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "游ゴシック体";
+  font-weight: 500;
 }
 
 .wp-pagenavi {
@@ -2484,43 +2525,6 @@ blockquote cite {
   font-size: 0.9em;
 }
 
-aside {
-  font-family: "游ゴシック体";
-  margin-top: 90px;
-}
-
-@media (min-width: 768px) {
-  aside {
-    width: 40%;
-  }
-}
-
-aside h2 {
-  font-weight: bold;
-  font-size: 21px;
-  color: #fff;
-  background-color: #1b224c;
-  width: 100%;
-  height: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  margin: 0 auto 30px auto;
-}
-
-@media (min-width: 768px) {
-  aside h2 {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1280px) {
-  aside h2 {
-    width: 270px;
-  }
-}
-
 .widget {
   width: 90%;
   margin-bottom: 27px;
@@ -2545,42 +2549,6 @@ aside h2 {
   width: 100px;
   height: 70px;
   object-fit: cover;
-}
-
-aside li {
-  list-style: none;
-}
-
-.eyecatch-label {
-  font-family: "游ゴシック体";
-  font-weight: 500;
-  font-size: 12px;
-  background-color: #1B224C;
-  color: #fff;
-  width: 78px;
-  height: 23px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-}
-
-.rpwe-block h3 {
-  font-size: 12px;
-  margin-left: 20px;
-  text-decoration: underline;
-  font-family: "游ゴシック体";
-  font-weight: 500;
-}
-
-.rpwe-block h3 a {
-  color: #1B224C;
-}
-
-.rpwe-li {
-  display: flex;
-  margin-bottom: 30px;
 }
 
 .aligncenter {
@@ -2654,5 +2622,37 @@ aside li {
   .alignnone img {
     max-width: 590px;
   }
+}
+
+.eyecatch-label {
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  font-size: 12px;
+  background-color: #1B224C;
+  color: #fff;
+  width: 78px;
+  height: 23px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.rpwe-block h3 {
+  font-size: 12px;
+  margin-left: 20px;
+  text-decoration: underline;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+}
+
+.rpwe-block h3 a {
+  color: #1B224C;
+}
+
+.rpwe-li {
+  display: flex;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

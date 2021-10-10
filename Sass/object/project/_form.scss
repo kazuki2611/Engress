@@ -1,0 +1,47 @@
+.p-form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: "游ゴシック体";
+  font-weight: 500;
+  // span {
+  //   margin-top: 35px;
+  //   margin-bottom: 40px;
+  // }
+  p {
+    span {
+      font-weight: 500;
+    }
+    input {
+      border: solid 0.5px #1b224c;
+      margin-top: 10px;
+    }
+    .form-text {
+      height: 50px;
+      padding-left: 20px;
+      width: 100%;
+    }
+    textarea {
+      margin-top: 10px;
+      border: solid 0.5px #1b224c;
+      width: 100%;
+      padding-top: 22px;
+      padding-left: 22px;
+      height: 240px;
+    }
+    .check {
+      color: #f5a623;
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      margin: 0 auto;
+      background-color: #1b224c;
+      color: $title-color;
+      border-radius: 10px;
+    }
+  }
+  @include breakpoint(tablet) {
+    max-width: 700px;
+  }
+}

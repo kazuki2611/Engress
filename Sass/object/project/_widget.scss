@@ -1,0 +1,21 @@
+.widget {
+  width: 90%;
+  margin-bottom: 27px;
+
+  margin: 27px auto 0 auto;
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+  a {
+    color: $base-color;
+    font-family: "游ゴシック体";
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+  }
+}

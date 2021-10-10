@@ -103,7 +103,7 @@
         <?php endif;
         wp_reset_postdata(); ?>
   </main>
-  <aside>
+  <aside class="p-aside">
 
     <?php if (is_active_sidebar('archive_widget')) :
       dynamic_sidebar('archive_widget');

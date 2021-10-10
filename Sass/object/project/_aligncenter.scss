@@ -1,0 +1,49 @@
+.aligncenter {
+  height: auto;
+  margin: 0 auto;
+  width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*figureタグで囲まれた画像の中央寄せ*/
+.aligncenter img {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*画像右寄せ*/
+.alignright {
+  height: auto;
+  margin-left: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*figureタグで囲まれた画像右寄せ*/
+.alignright img {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*位置指定のない画像*/
+.alignnone {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*figureタグで囲まれた位置指定のない画像*/
+.alignnone img {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}

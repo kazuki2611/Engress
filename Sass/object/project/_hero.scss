@@ -8,6 +8,56 @@
   @include breakpoint(pc) {
     height: 476px;
   }
+  &__archive {
+    margin-top: 50px;
+
+    &__wrap {
+      width: 80%;
+      margin: 0 auto;
+      @include breakpoint(tablet) {
+        max-width: 900px;
+      }
+    }
+    &__box {
+      border-top: solid 1px #d5d5d5;
+
+      // align-items: center;
+      display: flex;
+      padding-top: 10px;
+      align-items: center;
+
+      @include breakpoint(tablet) {
+        height: 64px;
+        display: flex;
+        padding-top: 0;
+      }
+      time {
+        padding-right: 10px;
+        align-items: center;
+
+        font-family: "游ゴシック体";
+        font-weight: 500;
+        font-size: 14px;
+        @include breakpoint(tablet) {
+          font-size: 16px;
+          margin-right: 50px;
+        }
+      }
+      p {
+        text-align: left;
+      }
+      a {
+        color: #1b224c;
+        font-weight: 500;
+        font-size: 0.75rem;
+
+        line-height: 1.5;
+        @include breakpoint(tablet) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 .p-hero__price {
   margin-top: 80px;

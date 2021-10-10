@@ -3,13 +3,13 @@
 <section class="p-price">
   <h1 class="c-price__title">料金体系</h1>
   <div class="p-price__inner">
-    <div class="c-price___item">
+    <div class="c-price__item">
       <p>入会金 39,800円</p>
     </div>
-    <div class="c-price___item__plus">
+    <div class="c-price__item__plus">
 
     </div>
-    <div class="c-price___item">
+    <div class="c-price__item">
       月額費用
     </div>
 
