@@ -1,19 +1,26 @@
 .p-blog {
+  @include breakpoint (tablet) {
+
+    width: 70%;
+  }
   &__wrap {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 20px;
     position: relative;
+   
     @include breakpoint (tablet) {
       width: auto;
+     
     }
     img {
-     
+     width: 100px;
+     height: 70px;
       object-fit: cover;
       @include breakpoint (tablet) {
-        width: 210px;
-        height: 128px;
+        width: 150px;
+        height: 110px;
       }
     }
     

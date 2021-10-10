@@ -23,17 +23,13 @@
 
           <div class="p-service__archive p-service__single">
             <!-- カテゴリー表示 -->
+            <div class="s">
             <?php
-            if ($terms = get_the_terms($post->ID, 'blog__cate')) {
-              foreach ($terms as $term) {
-              // カテゴリー 取得　クラス付与
-                echo ('<div class="s">') ;
-                echo esc_html($term->name)  ;
-                echo ('</div>') ;
+              $terms = get_the_terms($post->ID, 'blog__cate');
+              echo esc_html($terms[0]->name);
+              ?>
 
-              }
-            }
-            ?>
+            </div>
             <h2 class="c-service__archive__title c-service__single__title">
               <?php the_title(); ?>
 

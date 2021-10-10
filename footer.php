@@ -75,5 +75,8 @@
 
 
 <?php wp_footer(); ?>
+<script>
+new ScrollHint('.js-scrollable' );
+</script>
 
 </body>

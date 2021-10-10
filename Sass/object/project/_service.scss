@@ -7,9 +7,19 @@
     max-width: 900px;
     margin: 0 auto;
   }
-  &__single {
-    span {
+  &__archive {
+    max-width: 100%;
+    margin: 0 auto;
+    @include breakpoint (tablet) {
+      max-width: 400px;
     }
+    @include breakpoint (pc) {
+      
+      max-width: 590px;
+    }
+  }
+  &__single {
+    
     h3 {
       font-family: "游ゴシック体";
       font-weight: bold;

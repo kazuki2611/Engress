@@ -10,13 +10,13 @@
 
     </p>
     <button class="c-hero__button c-button">
-      <a href="<?php bloginfo("url"); ?>/contact">
+      <a href="<?php echo esc_url(home_url()); ?>/contact">
 
         資料請求
       </a>
     </button>
     <div class="c-hero__contact">
-      <a href="./form.html">
+      <a href="<?php echo esc_url(home_url()); ?>/contact">
         お問い合わせ
       </a>
     </div>
@@ -50,7 +50,10 @@
 
         <h3 class="c-concept__wrap__title c-title">
           Engressは<br>
-          TOEFLに特化したスクールです
+          <span>
+            TOEFLに特化したスクール
+          </span>
+          です
         </h3>
         <p class="c-concept__wrap__text">
           完全オーダーメイドで、１人１人の悩みに合わせた最適な指導で<br>
@@ -65,7 +68,7 @@
     </h1>
 
     <div class="p-service__box u-display">
-     
+
       <img src="<?php echo esc_url(get_template_directory_uri() . '/image/feature01.jpg'); ?>">
       <div class="p-service__box__wrap u-margin">
 
@@ -87,7 +90,7 @@
       </div>
     </div>
     <div class="p-service__box ">
-     
+
       <img src="<?php echo esc_url(get_template_directory_uri() . '/image/feature01.jpg'); ?>">
       <div class="p-service__box__wrap">
 
@@ -109,7 +112,7 @@
       </div>
     </div>
     <div class="p-service__box u-display">
-      
+
       <img src="<?php echo esc_url(get_template_directory_uri() . '/image/feature03.jpg'); ?>">
       <div class="p-service__box__wrap u-margin">
 
@@ -134,7 +137,10 @@
         Engressの料金プランはこちら
       </h3>
       <button class="c-service__plan__button c-button">
-        料金を見てみる
+        <a href="<?php echo esc_url(home_url()); ?>/price">
+          料金を見てみる
+
+        </a>
       </button>
     </div>
   </section>
@@ -142,9 +148,9 @@
     <h1 class="c-model__title c-title">
       TOEFL成功事例
     </h1>
-    <div <?php post_class("p-model__wrap");?>>
-    <?php while (have_posts()) : ?>
-      
+    <div <?php post_class("p-model__wrap"); ?>>
+      <?php while (have_posts()) : ?>
+
         <div class="p-model__box">
           <p class="c-model__box__title c-title">
 
@@ -309,7 +315,7 @@
 
 
     </div>
-    
+
 
   </section>
   <section>
@@ -420,7 +426,14 @@
             <div class="c-blog__wrap__text">
               <p>
                 <a href="<?php the_permalink(); ?>">
-                  <?php the_title(); ?>
+                  <?php
+                  if (mb_strlen($post->post_title, 'UTF-8') > 18) {
+                    $title = mb_substr($post->post_title, 0, 18, 'UTF-8');
+                    echo esc_html($title . '…');
+                  } else {
+                    echo esc_html($post->post_title);
+                  }
+                  ?>
                 </a>
 
               </p>

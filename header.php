@@ -7,15 +7,15 @@
   コーチング型TOEFLスクール">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engress</title>
+
   </title>
 
   <link rel="stylesheet" href="/Sass/styles.scss">
   <meta name="robots" content="noindex">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-  <link rel="icon" href="http://mysite.local/wp-content/themes/Engress/image/logo02.png">
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css">
+  <script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js"></script>
+  <link rel="icon" href="http://kazukazu.site/wp-content/themes/Engress/image/logo02.png">
 
 
 
@@ -25,7 +25,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+  <?php wp_body_open(); ?>
   <header class="l-header">
 
 
@@ -120,7 +120,7 @@
             </p>
           </div>
           <div class="c-header__right__number">
-           
+
             <img src="<?php echo esc_url(get_template_directory_uri() . '/image/logo3.png'); ?>">
             <p>
               0123-456-7890
@@ -157,7 +157,16 @@
       <img src="<?php bloginfo("template_url"); ?>/image/news.png">
     </div>
     <!-- それ以外のアーカイブページ -->
-  <?php } else if (is_archive()) { ?>
+    <!-- 順番も大切 -->
+  <?php } else if (is_tax('blog__cate')) { ?>
+
+    <div class="p-hero__child">
+      <h1>
+        カテゴリー
+      </h1>
+      <img src="<?php bloginfo("template_url"); ?>/image/blog.png">
+    </div>
+  <?php } else if (is_archive('blog')) { ?>
 
     <div class="p-hero__child">
       <h1>

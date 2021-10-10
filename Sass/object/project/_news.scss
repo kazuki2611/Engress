@@ -1,4 +1,8 @@
 .p-news {
+  @include breakpoint (tablet) {
+
+    width: 50%;
+  }
   &__wrap {
     height: 100px;
     width: 80%;

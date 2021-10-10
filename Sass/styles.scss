@@ -113,13 +113,14 @@
   }
   &__box {
     border-top: solid 1px #d5d5d5;
-    height: 64px;
+   
     // align-items: center;
     display: flex;
     padding-top: 10px;
     align-items: center;
 
     @include breakpoint(tablet) {
+      height: 64px;
       display: flex;
       padding-top: 0;
     }
@@ -185,7 +186,7 @@
 }
 
 .p-main__blog__box {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 30px;
   position: relative;
@@ -198,15 +199,19 @@
   img {
     margin: 0 auto;
     object-fit: cover;
-    width: 240px;
-    height: 178px;
-
+    width: 100%;
+    height: 220px;
+    display: block;
     @include breakpoint(tablet) {
+      width: 240px;
+      height: 178px;
     }
   }
 }
 .p-main__blog__text {
-  margin-left: 30px;
+  @include breakpoint(tablet) {
+    margin-left: 30px;
+  }
   a {
     color: #1b224c;
   }
@@ -280,7 +285,7 @@
       padding-left: 22px;
       height: 240px;
     }
-    a {
+    .check {
       color: #f5a623;
     }
     button {
@@ -323,13 +328,13 @@
   }
   &__wrap {
     display: flex;
-    gap: 7px;
+    gap: 6px;
     margin-top: 70px;
 
     overflow: auto; /*スクロールさせる*/
     white-space: nowrap; /*文字の折り返しを禁止*/
 
-    @include breakpoint(pc) {
+    @include breakpoint(tablet) {
       overflow: visible;
     }
     &::-webkit-scrollbar {
@@ -465,7 +470,7 @@
 .wp-pagenavi {
   /* 全体 */
   margin: 20px 0;
- 
+
   text-align: center;
   font-family: "游ゴシック体";
   font-weight: bold;
@@ -662,4 +667,53 @@ aside li {
 .rpwe-li {
   display: flex;
   margin-bottom: 30px;
+}
+.aligncenter {
+  height: auto;
+  margin: 0 auto;
+  width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*figureタグで囲まれた画像の中央寄せ*/
+.aligncenter img {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*画像右寄せ*/
+.alignright {
+  height: auto;
+  margin-left: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*figureタグで囲まれた画像右寄せ*/
+.alignright img {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*位置指定のない画像*/
+.alignnone {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+}
+/*figureタグで囲まれた位置指定のない画像*/
+.alignnone img {
+  height: auto;
+  max-width: 90%;
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
 }

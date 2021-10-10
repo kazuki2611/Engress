@@ -2,11 +2,15 @@
   width: 80%;
   margin: 0 auto;
   @include breakpoint(tablet) {
-    gap:10%;
     display: flex;
     max-width: 900px;
     margin: 0 auto;
     justify-content: center;
     justify-content: space-between;
+    gap: 5%;
+  }
+  @include breakpoint (pc) {
+    gap:10%;
+
   }
 }

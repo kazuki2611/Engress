@@ -3,12 +3,20 @@
     まずは無料で資料請求から
   </h3>
   <button class="c-contact__button">
-  資料請求
+
+    <a href="<?php echo esc_url(home_url()); ?>/contact" >
+
+      資料請求
+    </a>
   </button>
 
-  <a href="./form.html">
-    お問い合わせ
+
+
+  <a href="<?php echo esc_url(home_url()); ?>/contact" class="c-contact__link">
+
+   お問い合わせ
   </a>
+
 </section>
 <section class="p-number">
   <div class="p-contact__number">

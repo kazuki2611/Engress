@@ -1,26 +1,49 @@
 .c-contact {
   &__title {
-  font-family: "游ゴシック体";
-  font-weight: bold;
-  font-size: 28px;
-  color: $title-color;
-padding-top: 70px;
-line-height: 1.68;
-  @include breakpoint (tablet) {
-    font-size: 32px;
-  }
-    
+    font-family: "游ゴシック体";
+    font-weight: bold;
+    font-size: 28px;
+    color: $title-color;
+    padding-top: 70px;
+    line-height: 1.68;
+    @include breakpoint(tablet) {
+      font-size: 32px;
+    }
   }
   &__button {
-   background-color: #F5A623;
-   width: 280px;
-   line-height: 1.68;
-   border-radius: 50px;
-   height: 50px;
-   color: $title-color;
-   font-family: "游ゴシック体";
-   font-weight: bold;
-   font-size: 16px;
-   margin-top: 16px;
+    background-color: #f5a623;
+    width: 280px;
+    line-height: 1.68;
+    border-radius: 50px;
+    height: 50px;
+    color: $title-color;
+    font-family: "游ゴシック体";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 16px;
+    a {
+    
+        text-decoration: underline;
+        color: #fff;
+        display: block;
+      
+        font-size: 16px;
+        font-family: "游ゴシック体";
+        font-weight: 500;
+       
+      
+    }
   }
+  &__link {
+   
+      text-decoration: underline;
+      color: #fff;
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      font-family: "游ゴシック体";
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+  
 }

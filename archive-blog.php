@@ -15,7 +15,7 @@
         <div class="p-main__blog__box">
           <!-- サムネイル取得 -->
           <?php
-          if (has_post_thumbnail('full')) :
+          if (has_post_thumbnail()) :
             the_post_thumbnail();
           else :
           ?>
@@ -26,7 +26,6 @@
             <!-- カテゴリー名を表示する（リンクなし）-->
 
             <?php $terms = get_the_terms($post->ID, 'blog__cate');
-            
             foreach ($terms as $term) {
               $term_name = $term->name;
               echo esc_html($term_name);

@@ -20,7 +20,8 @@
   <h1 class="c-price__title2">
     料金表
   </h1>
-  <div class="p-price__wrap ">
+ 
+  <div class="p-price__wrap js-scrollable">
     <div class="p-price__wrap__box">
       <h2>
         基礎プラン

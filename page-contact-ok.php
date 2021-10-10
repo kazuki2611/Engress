@@ -11,14 +11,14 @@
 <?php
 if (have_posts()) :
   while (have_posts()) : the_post(); ?>
-    <div class="p-form">
+    <form class="p-form">
 
 
 
 
 
       <h2 class="c-service__archive__title c-service__single__title">
-
+      
       </h2>
       <?php the_content(); ?>
 
@@ -29,11 +29,11 @@ if (have_posts()) :
 
 
     <?php endwhile;
-else :
+    else :
     ?><p>表示する記事がありません</p><?php
                         endif;
                           ?>
-    </div>
+    </form>
     <section class="p-contact">
       <h3 class="c-contact__title">
         まずは無料で資料請求から
@@ -60,3 +60,4 @@ else :
 
 
     <?php get_footer(); ?>
+    
